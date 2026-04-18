@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+  <script src="projects.js"></script>
+  <script>
+    const id = new URLSearchParams(location.search).get('id') || 'a-little-flexibility';
+    const p = window.PROJECTS[id];
+    if (!p) location.href = 'index.html';
+    document.documentElement.style.setProperty('--project-color', p.color);
+    document.title = p.title.replace('\n', ' ');
+  </script>
+  <style>
+    @font-face {
+      font-family: 'PP Kyoto';
+      src: url('fonts/PPKyoto-Medium.otf') format('opentype');
+      font-weight: 500;
+    }
+    @font-face {
+      font-family: 'PP Mori';
+      src: url('fonts/PPMori-Regular.otf') format('opentype');
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: 'PP Mori';
+      src: url('fonts/PPMori-SemiBold.otf') format('opentype');
+      font-weight: 600;
+    }
+  </style>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --project-color: #ad2c1c;
+    }
+
+    body {
+      background: #fff;
+      color: #000;
+      font-family: 'PP Mori', sans-serif;
+    }
+
+    @keyframes fadeInBlur {
+      0%   { opacity: 0; filter: blur(10px); }
+      100% { opacity: 1; filter: blur(0px); }
+    }
+
+    .page {
+      max-width: 1440px;
+      margin: 0 auto;
+      animation: fadeInBlur 1.2s ease-out forwards;
+    }
+
+    /* ── Header / back arrow ─────────────────── */
+    .header {
+      height: 140px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .back-link svg {
+      width: 80px;
+      height: 50px;
+    }
+
+    /* ── Section header (pill + line) ───────── */
+    .section-header {
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      height: 115px;
+    }
+
+    .section-header__label {
+      font-size: 24px;
+      font-weight: 600;
+      border: 1.5px solid #000;
+      border-radius: 999px;
+      padding: 14px 22px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .section-header__line {
+      flex: 1;
+      height: 1px;
+      background: #000;
+      margin-left: 6px;
+    }
+
+    /* ── Intro block ─────────────────────────── */
+    .intro {
+      padding: 20px 20px 60px;
+    }
+
+    .intro__title {
+      font-family: 'PP Kyoto', sans-serif;
+      font-size: clamp(42px, 6.67vw, 96px);
+      font-weight: 700;
+      line-height: 0.88;
+      max-width: 779px;
+      text-transform: capitalize;
+      margin-bottom: 40px;
+    }
+
+    .intro__body {
+      font-size: 16px;
+      line-height: 1.4;
+      max-width: 1400px;
+    }
+
+    /* ── Image grids ─────────────────────────── */
+    .image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 0 20px 20px;
+    }
+
+    .image-thumb {
+      background: var(--project-color);
+      border-radius: 12px;
+      aspect-ratio: 16 / 9;
+      width: 100%;
+    }
+
+    /* ── Movie section ───────────────────────── */
+    .movie-section {
+      padding: 60px 20px;
+    }
+
+    .movie-title {
+      font-family: 'PP Kyoto', sans-serif;
+      font-size: clamp(32px, 4.44vw, 64px);
+      font-weight: 700;
+      line-height: 0.88;
+      max-width: 1280px;
+      margin-bottom: 40px;
+      text-transform: capitalize;
+    }
+
+    .movie-placeholder {
+      background: var(--project-color);
+      border-radius: 12px;
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      max-width: 1400px;
+      margin-bottom: 40px;
+    }
+
+    .movie-caption {
+      font-size: 16px;
+      line-height: 1.4;
+      max-width: 1280px;
+    }
+
+    /* ── Split text section ──────────────────── */
+    .split-section {
+      display: grid;
+      grid-template-columns: 500px 1fr;
+      gap: 40px;
+      padding: 60px 20px 100px;
+      align-items: start;
+    }
+
+    .split-section__title {
+      font-family: 'PP Kyoto', sans-serif;
+      font-size: clamp(42px, 6.67vw, 96px);
+      font-weight: 700;
+      line-height: 0.88;
+      text-transform: capitalize;
+    }
+
+    .split-section__body {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .split-section { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header class="header">
+    <a class="back-link" href="index.html" aria-label="Back">
+      <svg viewBox="0 0 164 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="158" y1="50" x2="8" y2="50" stroke="black" stroke-width="10" stroke-linecap="round"/>
+        <line x1="8" y1="50" x2="58" y2="8" stroke="black" stroke-width="10" stroke-linecap="round"/>
+        <line x1="8" y1="50" x2="58" y2="92" stroke="black" stroke-width="10" stroke-linecap="round"/>
+      </svg>
+    </a>
+  </header>
+
+  <div class="section-header">
+    <span class="section-header__label" id="project-category">Project</span>
+    <div class="section-header__line"></div>
+  </div>
+
+  <div class="intro">
+    <h1 class="intro__title" id="project-title"></h1>
+    <p class="intro__body" id="project-body"></p>
+  </div>
+
+  <div class="image-grid">
+    <div class="image-thumb"></div>
+    <div class="image-thumb"></div>
+    <div class="image-thumb"></div>
+    <div class="image-thumb"></div>
+    <div class="image-thumb"></div>
+    <div class="image-thumb"></div>
+    <div class="image-thumb"></div>
+    <div class="image-thumb"></div>
+  </div>
+
+  <div class="movie-section">
+    <h2 class="movie-title" id="movie-title"></h2>
+    <div class="movie-placeholder"></div>
+    <p class="movie-caption" id="movie-caption"></p>
+  </div>
+
+  <div class="split-section">
+    <h2 class="split-section__title" id="split-title"></h2>
+    <p class="split-section__body" id="split-body"></p>
+  </div>
+
+</div>
+<script>
+  const titleHTML = p.title.replace('\n', '<br>');
+  document.getElementById('project-category').textContent = p.tags.map(t => t.charAt(0).toUpperCase() + t.slice(1)).join(' / ');
+  document.getElementById('project-title').innerHTML = titleHTML;
+  document.getElementById('project-body').textContent = p.description;
+  document.getElementById('movie-title').innerHTML = titleHTML;
+  document.getElementById('movie-caption').textContent = p.shortDescription;
+  document.getElementById('split-title').innerHTML = titleHTML;
+  document.getElementById('split-body').textContent = p.shortDescription;
+</script>
+</body>
+</html>
