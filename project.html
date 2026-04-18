@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project</title>
+  <link rel="preload" href="fonts/PPKyoto-Medium.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="fonts/PPMori-Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="fonts/PPMori-SemiBold.otf" as="font" type="font/otf" crossorigin>
   <script src="projects.js"></script>
   <script>
     const id = new URLSearchParams(location.search).get('id') || 'a-little-flexibility';
@@ -42,15 +45,20 @@
       font-family: 'PP Mori', sans-serif;
     }
 
-    @keyframes fadeInBlur {
-      0%   { opacity: 0; filter: blur(10px); }
-      100% { opacity: 1; filter: blur(0px); }
-    }
-
     .page {
       max-width: 1440px;
       margin: 0 auto;
-      animation: fadeInBlur 1.2s ease-out forwards;
+    }
+
+    .fade-in {
+      opacity: 0;
+      filter: blur(10px);
+      transition: opacity 0.8s ease-out, filter 0.8s ease-out;
+    }
+
+    .fade-in.animate-in {
+      opacity: 1;
+      filter: blur(0px);
     }
 
     /* ── Header / back arrow ─────────────────── */
@@ -111,13 +119,42 @@
       line-height: 0.88;
       max-width: 779px;
       text-transform: capitalize;
-      margin-bottom: 40px;
+      margin-bottom: 16px;
     }
 
-    .intro__body {
+    .intro__deliverable {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 48px;
+    }
+
+    .intro__csl {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .intro__csl-item {
+      border-top: 1px solid #000;
+      padding-top: 16px;
+    }
+
+    .intro__csl-label {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .intro__csl-body {
       font-size: 16px;
       line-height: 1.4;
-      max-width: 1400px;
+    }
+
+    @media (max-width: 768px) {
+      .intro__csl { grid-template-columns: 1fr; }
     }
 
     /* ── Image grids ─────────────────────────── */
@@ -133,21 +170,49 @@
       border-radius: 12px;
       aspect-ratio: 16 / 9;
       width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    img.image-thumb {
+      aspect-ratio: auto;
+      height: auto;
+    }
+
+    #movie-media {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 0 20px;
+      justify-items: center;
+    }
+
+    .video-embed {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .video-embed iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+
+    /* ── Image note ─────────────────────────── */
+    .image-note {
+      font-size: 13px;
+      color: #888;
+      padding: 12px 20px 0;
+      line-height: 1.4;
     }
 
     /* ── Movie section ───────────────────────── */
     .movie-section {
-      padding: 60px 20px;
-    }
-
-    .movie-title {
-      font-family: 'PP Kyoto', sans-serif;
-      font-size: clamp(32px, 4.44vw, 64px);
-      font-weight: 700;
-      line-height: 0.88;
-      max-width: 1280px;
-      margin-bottom: 40px;
-      text-transform: capitalize;
+      padding-bottom: 40px;
     }
 
     .movie-placeholder {
@@ -156,40 +221,68 @@
       aspect-ratio: 16 / 9;
       width: 100%;
       max-width: 1400px;
-      margin-bottom: 40px;
+      margin: 0 20px;
     }
 
-    .movie-caption {
+    .motion-intro {
       font-size: 16px;
       line-height: 1.4;
-      max-width: 1280px;
+      padding: 0 20px 40px;
     }
 
-    /* ── Split text section ──────────────────── */
-    .split-section {
+    .motion-concepts {
       display: grid;
-      grid-template-columns: 500px 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 40px;
-      padding: 60px 20px 100px;
-      align-items: start;
+      padding: 20px 20px 40px;
     }
 
-    .split-section__title {
-      font-family: 'PP Kyoto', sans-serif;
-      font-size: clamp(42px, 6.67vw, 96px);
-      font-weight: 700;
-      line-height: 0.88;
-      text-transform: capitalize;
+    .motion-concept__title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
     }
 
-    .split-section__body {
+    .motion-concept__body {
       font-size: 16px;
       line-height: 1.4;
     }
 
     @media (max-width: 768px) {
-      .split-section { grid-template-columns: 1fr; }
+      .motion-concepts { grid-template-columns: 1fr; }
     }
+
+    /* ── Footer ─────────────────────────────── */
+    .page-footer {
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      height: 115px;
+      margin-bottom: 80px;
+    }
+
+    .footer-line {
+      flex: 1;
+      height: 1px;
+      background: #000;
+    }
+
+    .footer-btn {
+      font-size: 24px;
+      font-weight: 600;
+      border: 1.5px solid #000;
+      border-radius: 999px;
+      padding: 14px 22px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      line-height: 1;
+      text-decoration: none;
+      color: #000;
+      margin: 0 6px;
+      transition: opacity 0.2s;
+    }
+
+    .footer-btn:hover { opacity: 0.4; }
   </style>
 </head>
 <body>
@@ -205,17 +298,31 @@
     </a>
   </header>
 
-  <div class="section-header">
+  <div class="section-header fade-in">
     <span class="section-header__label" id="project-category">Project</span>
     <div class="section-header__line"></div>
   </div>
 
-  <div class="intro">
+  <div class="intro fade-in">
     <h1 class="intro__title" id="project-title"></h1>
-    <p class="intro__body" id="project-body"></p>
+    <p class="intro__deliverable" id="project-deliverable"></p>
+    <div class="intro__csl">
+      <div class="intro__csl-item">
+        <span class="intro__csl-label">The Challenge</span>
+        <p class="intro__csl-body" id="project-challenge"></p>
+      </div>
+      <div class="intro__csl-item">
+        <span class="intro__csl-label">The Solution</span>
+        <p class="intro__csl-body" id="project-solution"></p>
+      </div>
+      <div class="intro__csl-item">
+        <span class="intro__csl-label">The Logic</span>
+        <p class="intro__csl-body" id="project-logic"></p>
+      </div>
+    </div>
   </div>
 
-  <div class="image-grid">
+  <div class="image-grid fade-in" id="image-grid">
     <div class="image-thumb"></div>
     <div class="image-thumb"></div>
     <div class="image-thumb"></div>
@@ -226,27 +333,71 @@
     <div class="image-thumb"></div>
   </div>
 
-  <div class="movie-section">
-    <h2 class="movie-title" id="movie-title"></h2>
-    <div class="movie-placeholder"></div>
-    <p class="movie-caption" id="movie-caption"></p>
+  <p class="image-note fade-in" id="image-note"></p>
+
+  <div class="movie-section fade-in">
+    <div class="section-header">
+      <span class="section-header__label" id="motion-label">Motion</span>
+      <div class="section-header__line"></div>
+    </div>
+    <p class="motion-intro" id="motion-intro"></p>
+    <div class="motion-concepts" id="motion-concepts"></div>
+    <div id="movie-media"><div class="movie-placeholder"></div></div>
   </div>
 
-  <div class="split-section">
-    <h2 class="split-section__title" id="split-title"></h2>
-    <p class="split-section__body" id="split-body"></p>
-  </div>
+  <footer class="page-footer fade-in">
+    <div class="footer-line"></div>
+    <a class="footer-btn" href="index.html">Back to Work</a>
+    <div class="footer-line"></div>
+  </footer>
 
 </div>
 <script>
   const titleHTML = p.title.replace('\n', '<br>');
-  document.getElementById('project-category').textContent = p.tags.map(t => t.charAt(0).toUpperCase() + t.slice(1)).join(' / ');
+  document.getElementById('project-category').textContent = p.categoryLabel || p.tags.map(t => t.charAt(0).toUpperCase() + t.slice(1)).join(' / ');
   document.getElementById('project-title').innerHTML = titleHTML;
-  document.getElementById('project-body').textContent = p.description;
-  document.getElementById('movie-title').innerHTML = titleHTML;
-  document.getElementById('movie-caption').textContent = p.shortDescription;
-  document.getElementById('split-title').innerHTML = titleHTML;
-  document.getElementById('split-body').textContent = p.shortDescription;
+  document.getElementById('project-deliverable').textContent = p.deliverable || '';
+  document.getElementById('project-challenge').textContent = p.challenge || '';
+  document.getElementById('project-solution').textContent = p.solution || '';
+  document.getElementById('project-logic').textContent = p.logic || '';
+  if (p.imageNote) {
+    document.getElementById('image-note').textContent = p.imageNote;
+  }
+
+  if (p.motionSection) {
+    document.getElementById('motion-label').textContent = 'Motion';
+    document.getElementById('motion-intro').style.display = 'none';
+    document.getElementById('motion-concepts').innerHTML = p.motionSection.concepts
+      .map(c => `<div><p class="motion-concept__title">${c.title}</p><p class="motion-concept__body">${c.body}</p></div>`)
+      .join('');
+  } else {
+    document.querySelector('.movie-section .section-header').style.display = 'none';
+    document.getElementById('motion-intro').style.display = 'none';
+    document.getElementById('motion-concepts').style.display = 'none';
+  }
+
+  if (p.images && p.images.length) {
+    document.getElementById('image-grid').innerHTML = p.images
+      .map(src => `<img class="image-thumb" src="${src}" loading="eager" alt="">`)
+      .join('');
+  }
+
+  if (p.videos && p.videos.length) {
+    document.getElementById('movie-media').innerHTML = p.videos
+      .map(v => `<div class="video-embed" style="aspect-ratio:${v.ratio || '4/5'}"><iframe src="https://player.vimeo.com/video/${v.id}?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>`)
+      .join('');
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
