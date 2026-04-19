@@ -20,6 +20,13 @@
       font-family: 'PP Kyoto';
       src: url('fonts/PPKyoto-Medium.otf') format('opentype');
       font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'PP Kyoto';
+      src: url('fonts/PPKyoto-MediumItalic.otf') format('opentype');
+      font-weight: 500;
+      font-style: italic;
     }
     @font-face {
       font-family: 'PP Mori';
@@ -109,6 +116,13 @@
       height: 1px;
       background: var(--fg);
       margin-left: 6px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 1.25s cubic-bezier(0, 0, 0.15, 1);
+    }
+
+    .section-header.animate-in .section-header__line {
+      transform: scaleX(1);
     }
 
     /* ── Intro block ─────────────────────────── */
@@ -323,12 +337,52 @@ border-radius: 12px;
       background: var(--fg);
       color: var(--bg);
     }
+
+    /* ── Sections block system ───────────────── */
+    .section-block-video { padding: 0 20px 20px; }
+    .section-block-video .video-embed { border-radius: 12px; overflow: hidden; }
+
+    .credits-block {
+      padding: 0 20px 32px;
+      font-size: 14px;
+      line-height: 2;
+      color: #999;
+    }
+
+    .section-text {
+      padding: 0 20px 32px;
+      font-size: 14px;
+      line-height: 2;
+      color: #999999;
+    }
+
+    .section-caption {
+      padding: 12px 20px 32px;
+      font-size: 14px;
+      color: #999;
+      line-height: 2;
+    }
+
+    .quote-block {
+      padding: 48px 20px;
+      text-align: center;
+    }
+
+    .quote-block p {
+      font-family: 'PP Kyoto', sans-serif;
+      font-weight: 500;
+      font-style: italic;
+      font-size: clamp(20px, 2.22vw, 32px);
+      line-height: 1.5;
+      max-width: 760px;
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
 <div class="page">
 
-  <div class="section-header">
+  <div class="section-header fade-in">
     <span class="section-header__label" id="project-category">Project</span>
     <div class="section-header__line"></div>
   </div>
@@ -416,9 +470,49 @@ border-radius: 12px;
   }
 
   if (p.videos && p.videos.length) {
-    document.getElementById('movie-media').innerHTML = p.videos
+    const media = document.getElementById('movie-media');
+    if (p.videoMaxHeight) {
+      const [rw, rh] = (p.videos[0].ratio || '16/9').split('/').map(Number);
+      const maxW = Math.round(p.videoMaxHeight * rw / rh);
+      media.style.gridTemplateColumns = '1fr';
+      media.style.maxWidth = `${maxW}px`;
+      media.style.margin = '0 auto';
+    }
+    media.innerHTML = p.videos
       .map(v => `<div class="video-embed" style="aspect-ratio:${v.ratio || '4/5'}"><iframe src="https://player.vimeo.com/video/${v.id}?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>`)
       .join('');
+  }
+
+  function renderBlock(block) {
+    switch (block.type) {
+      case 'video':
+        return `<div class="section-block-video fade-in"><div class="video-embed" style="aspect-ratio:${block.ratio||'16/9'}"><iframe src="https://player.vimeo.com/video/${block.id}?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div></div>`;
+      case 'credits':
+        return `<div class="credits-block fade-in">${block.lines.map(l=>`<p>${l}</p>`).join('')}</div>`;
+      case 'text':
+        return `<p class="section-text fade-in">${block.body}</p>`;
+      case 'images': {
+        const cols = block.columns || 2;
+        return `<div class="image-grid fade-in" style="grid-template-columns:repeat(${cols},1fr)">${block.items.map(src=>`<img class="image-thumb" src="${src}" loading="lazy" alt="">`).join('')}</div>`;
+      }
+      case 'quote':
+        return `<div class="quote-block fade-in"><p>${block.text}</p></div>`;
+      case 'caption':
+        return `<p class="section-caption fade-in">${block.body}</p>`;
+    }
+    return '';
+  }
+
+  function renderSection(sec, i) {
+    const header = i === 0 ? '' : `<div class="section-header fade-in"><span class="section-header__label">${sec.label}</span><div class="section-header__line"></div></div>`;
+    return header + sec.blocks.map(renderBlock).join('');
+  }
+
+  if (p.sections) {
+    document.getElementById('image-grid').style.display = 'none';
+    document.getElementById('image-note').style.display = 'none';
+    document.querySelector('.movie-section').style.display = 'none';
+    document.querySelector('.page-footer').insertAdjacentHTML('beforebegin', p.sections.map((sec, i) => renderSection(sec, i)).join(''));
   }
 
   const observer = new IntersectionObserver((entries) => {

@@ -215,30 +215,53 @@ var PROJECTS = {
     ],
   },
   'beats-by-dre-pop': {
-    tags: ['motion', 'design'],
-    categoryLabel: 'Brand Campaign',
+    tags: ['motion', 'design', '3d'],
+    categoryLabel: 'Motion',
     title: 'Beats by Dre\nPop',
     deliverable: 'Global Campaign — Animation & Design',
     challenge: 'Create animation and design for a global Beats campaign celebrating colorful headphones. The brief: life\'s more fun in color.',
     solution: 'Developed a vibrant motion system using illustration, abstract animation, and color theory. Music by MNEK feat. Hailee Steinfeld drove the pacing and energy.',
     logic: 'The campaign needed to feel joyful and unapologetically bold — motion that matched the product\'s personality rather than just showcasing it.',
     color: '#C41E7A',
-    images: [
-      'images/beats-by-dre-pop/frame-1.jpg',
-      'images/beats-by-dre-pop/frame-2.jpg',
-      'images/beats-by-dre-pop/frame-3.jpg',
-      'images/beats-by-dre-pop/frame-4.jpg',
-      'images/beats-by-dre-pop/frame-5.jpg',
-    ],
-    videos: [
-      { id: '273924404', ratio: '16/9' },
+    sections: [
+      {
+        label: 'Motion',
+        blocks: [
+          { type: 'video', id: '273924404', ratio: '16/9' },
+          { type: 'credits', lines: [
+            'Beats by Dre — Global Marketing',
+            'Creative Direction — Casey Ryder',
+            'Animation and Design — Eric Zunkley and Carlo Flores',
+            'Producer — Tara Moncure',
+            'Illustration and Conceptual Elements — Okuda San Miguel',
+            'Music — MNEK \u201cColour\u201d Feat. Hailee Steinfeld',
+          ]},
+          { type: 'text', body: 'This video was distributed globally and translated to languages around the world, and played in-device at Apple Stores as well as online.' },
+          { type: 'images', items: ['images/beats-by-dre-pop/frame-3.jpg'], columns: 1 },
+          { type: 'quote', text: '\u201cLife\u2019s more fun in color. Make it pop everywhere you go with your favorite color of Beats Solo3 Wireless and Powerbeats3 Wireless.\u201d' },
+        ],
+      },
+      {
+        label: 'Design',
+        blocks: [
+          { type: 'images', items: ['images/beats-by-dre-pop/frame-1.jpg', 'images/beats-by-dre-pop/frame-2.jpg'], columns: 2 },
+          { type: 'caption', body: 'Social assets were produced by our vendor partner at Laundry.' },
+        ],
+      },
+      {
+        label: '3D',
+        blocks: [
+          { type: 'images', items: ['images/beats-by-dre-pop/frame-4.jpg', 'images/beats-by-dre-pop/frame-5.jpg'], columns: 2 },
+          { type: 'caption', body: 'Concept for a display unit in Australia. Concept frames for an Optus retail store installation.' },
+        ],
+      },
     ],
   },
   'beats-buddy': {
     tags: ['motion'],
-    categoryLabel: 'Social Motion',
+    categoryLabel: 'Motion',
     title: 'Beats Buddy',
-    deliverable: 'Instagram Story Animation',
+    deliverable: 'Instagram Story',
     challenge: 'Design a motion piece for Instagram Story format promoting Harlan & Alondra\'s album Buddy for the Beats by Dre social team.',
     solution: 'Created a vertical motion design at Laundry Service that matched the album\'s energy and the constraints of the Story format — looping, immediate, and built for sound-off viewing.',
     logic: 'Portrait format social video demands a different motion logic than broadcast. Every element had to read clearly in the first second.',
@@ -253,6 +276,7 @@ var PROJECTS = {
       'images/beats-buddy/frame-5.jpg',
       'images/beats-buddy/frame-6.jpg',
     ],
+    videoMaxHeight: 960,
     videos: [
       { id: '432656095', ratio: '9/16' },
     ],
