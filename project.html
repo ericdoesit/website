@@ -30,6 +30,18 @@
     }
     @font-face {
       font-family: 'PP Mori';
+      src: url('fonts/PPMori-Extralight.otf') format('opentype');
+      font-weight: 200;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'PP Mori';
+      src: url('fonts/PPMori-ExtralightItalic.otf') format('opentype');
+      font-weight: 200;
+      font-style: italic;
+    }
+    @font-face {
+      font-family: 'PP Mori';
       src: url('fonts/PPMori-Regular.otf') format('opentype');
       font-weight: 400;
     }
@@ -127,7 +139,7 @@
 
     /* ── Intro block ─────────────────────────── */
     .intro {
-      padding: 20px 20px 60px;
+      padding: 20px 20px 32px;
     }
 
     .intro__title {
@@ -344,36 +356,46 @@ border-radius: 12px;
 
     .credits-block {
       padding: 0 20px 32px;
-      font-size: 14px;
-      line-height: 2;
-      color: #999;
+    }
+
+    .credits-block .credits-label {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--fg);
+      margin-bottom: 4px;
+    }
+
+    .credits-block p:not(.credits-label) {
+      font-size: 16px;
+      line-height: 1.4;
+      color: #999999;
     }
 
     .section-text {
       padding: 0 20px 32px;
-      font-size: 14px;
-      line-height: 2;
+      font-size: 16px;
+      line-height: 1.4;
       color: #999999;
     }
 
     .section-caption {
       padding: 12px 20px 32px;
-      font-size: 14px;
-      color: #999;
-      line-height: 2;
+      font-size: 16px;
+      line-height: 1.4;
+      color: #999999;
     }
 
     .quote-block {
-      padding: 48px 20px;
+      padding: 40px 20px;
       text-align: center;
     }
 
     .quote-block p {
-      font-family: 'PP Kyoto', sans-serif;
-      font-weight: 500;
+      font-family: 'PP Mori', sans-serif;
+      font-weight: 200;
       font-style: italic;
-      font-size: clamp(20px, 2.22vw, 32px);
-      line-height: 1.5;
+      font-size: clamp(24px, 3vw, 48px);
+      line-height: 1.05;
       max-width: 760px;
       margin: 0 auto;
     }
@@ -488,7 +510,7 @@ border-radius: 12px;
       case 'video':
         return `<div class="section-block-video fade-in"><div class="video-embed" style="aspect-ratio:${block.ratio||'16/9'}"><iframe src="https://player.vimeo.com/video/${block.id}?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div></div>`;
       case 'credits':
-        return `<div class="credits-block fade-in">${block.lines.map(l=>`<p>${l}</p>`).join('')}</div>`;
+        return `<div class="credits-block fade-in"><p class="credits-label">Credits</p>${block.lines.map(l=>`<p>${l}</p>`).join('')}</div>`;
       case 'text':
         return `<p class="section-text fade-in">${block.body}</p>`;
       case 'images': {

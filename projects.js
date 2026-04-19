@@ -217,7 +217,7 @@ var PROJECTS = {
   'beats-by-dre-pop': {
     tags: ['motion', 'design', '3d'],
     categoryLabel: 'Motion',
-    title: 'Beats by Dre\nPop Campaign',
+    title: 'Beats by Dre\nPop',
     deliverable: 'Global Campaign — Animation & Design',
     challenge: 'Create animation and design for a global Beats campaign celebrating colorful headphones. The brief: life\'s more fun in color.',
     solution: 'Developed a vibrant motion system using illustration, abstract animation, and color theory. Music by MNEK feat. Hailee Steinfeld drove the pacing and energy.',
@@ -227,6 +227,7 @@ var PROJECTS = {
       {
         label: 'Motion',
         blocks: [
+          { type: 'quote', text: '\u201cLife\u2019s more fun in color. Make it pop everywhere you go with your favorite color of Beats Solo3 Wireless and Powerbeats3 Wireless.\u201d' },
           { type: 'video', id: '273924404', ratio: '16/9' },
           { type: 'credits', lines: [
             'Beats by Dre — Global Marketing',
@@ -236,9 +237,8 @@ var PROJECTS = {
             'Illustration and Conceptual Elements — Okuda San Miguel',
             'Music — MNEK \u201cColour\u201d Feat. Hailee Steinfeld',
           ]},
-          { type: 'text', body: 'This video was distributed globally and translated to languages around the world, and played in-device at Apple Stores as well as online.' },
           { type: 'images', items: ['images/beats-by-dre-pop/frame-3.jpg'], columns: 1 },
-          { type: 'quote', text: '\u201cLife\u2019s more fun in color. Make it pop everywhere you go with your favorite color of Beats Solo3 Wireless and Powerbeats3 Wireless.\u201d' },
+          { type: 'text', body: 'This video was distributed globally and translated to languages around the world, and played in-device at Apple Stores as well as online.' },
         ],
       },
       {
