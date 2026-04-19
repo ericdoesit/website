@@ -37,28 +37,32 @@
 
     :root {
       --project-color: #ad2c1c;
+      --bg: #151515;
+      --fg: #F1F1F1;
     }
 
     body {
-      background: #fff;
-      color: #000;
+      background: var(--bg);
+      color: var(--fg);
       font-family: 'PP Mori', sans-serif;
     }
 
     .page {
       max-width: 1440px;
       margin: 0 auto;
+      padding-top: 20px;
     }
 
     .fade-in {
       opacity: 0;
-      filter: blur(10px);
-      transition: opacity 0.8s ease-out, filter 0.8s ease-out;
+      transform: translateY(20px);
+      transition: opacity 1s cubic-bezier(.12, .23, .5, 1),
+                  transform 1s cubic-bezier(.12, .23, .5, 1);
     }
 
     .fade-in.animate-in {
       opacity: 1;
-      filter: blur(0px);
+      transform: translateY(0);
     }
 
     /* ── Header / back arrow ─────────────────── */
@@ -73,7 +77,7 @@
       display: inline-flex;
       align-items: center;
       text-decoration: none;
-      color: #000;
+      color: var(--fg);
     }
 
     .back-link svg {
@@ -92,7 +96,7 @@
     .section-header__label {
       font-size: 24px;
       font-weight: 600;
-      border: 1.5px solid #000;
+      border: 1.5px solid var(--fg);
       border-radius: 999px;
       padding: 14px 22px;
       white-space: nowrap;
@@ -103,7 +107,7 @@
     .section-header__line {
       flex: 1;
       height: 1px;
-      background: #000;
+      background: var(--fg);
       margin-left: 6px;
     }
 
@@ -136,7 +140,7 @@
     }
 
     .intro__csl-item {
-      border-top: 1px solid #000;
+      border-top: 1px solid var(--fg);
       padding-top: 16px;
     }
 
@@ -191,7 +195,7 @@
       position: relative;
       aspect-ratio: 4 / 5;
       width: 100%;
-      border-radius: 12px;
+border-radius: 12px;
       overflow: hidden;
     }
 
@@ -205,7 +209,7 @@
     /* ── Image note ─────────────────────────── */
     .image-note {
       font-size: 13px;
-      color: #888;
+      color: #999;
       padding: 12px 20px 0;
       line-height: 1.4;
     }
@@ -256,49 +260,51 @@
     .page-footer {
       display: flex;
       align-items: center;
-      padding: 0 20px;
-      height: 115px;
-      margin-bottom: 80px;
+      padding: 40px 20px 20vh;
     }
 
     .footer-line {
       flex: 1;
       height: 1px;
-      background: #000;
+      background: var(--fg);
+      transform: scaleX(0);
+      transition: transform 1.25s cubic-bezier(0, 0, 0.15, 1);
+    }
+
+    .footer-line:first-child { transform-origin: right; }
+    .footer-line:last-child  { transform-origin: left; }
+
+    .page-footer.animate-in .footer-line {
+      transform: scaleX(1);
     }
 
     .footer-btn {
       font-size: 24px;
       font-weight: 600;
-      border: 1.5px solid #000;
+      border: 1.5px solid var(--fg);
       border-radius: 999px;
       padding: 14px 22px;
       white-space: nowrap;
       flex-shrink: 0;
       line-height: 1;
       text-decoration: none;
-      color: #000;
+      color: var(--fg);
+      background: transparent;
       margin: 0 6px;
-      transition: opacity 0.2s;
+      transition: background 0.3s cubic-bezier(.12, .23, .5, 1),
+                  color 0.3s cubic-bezier(.12, .23, .5, 1);
     }
 
-    .footer-btn:hover { opacity: 0.4; }
+    .footer-btn:hover {
+      background: var(--fg);
+      color: var(--bg);
+    }
   </style>
 </head>
 <body>
 <div class="page">
 
-  <header class="header">
-    <a class="back-link" href="index.html" aria-label="Back">
-      <svg viewBox="0 0 164 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="158" y1="50" x2="8" y2="50" stroke="black" stroke-width="10" stroke-linecap="round"/>
-        <line x1="8" y1="50" x2="58" y2="8" stroke="black" stroke-width="10" stroke-linecap="round"/>
-        <line x1="8" y1="50" x2="58" y2="92" stroke="black" stroke-width="10" stroke-linecap="round"/>
-      </svg>
-    </a>
-  </header>
-
-  <div class="section-header fade-in">
+  <div class="section-header">
     <span class="section-header__label" id="project-category">Project</span>
     <div class="section-header__line"></div>
   </div>
@@ -345,7 +351,7 @@
     <div id="movie-media"><div class="movie-placeholder"></div></div>
   </div>
 
-  <footer class="page-footer fade-in">
+  <footer class="page-footer">
     <div class="footer-line"></div>
     <a class="footer-btn" href="index.html">Back to Work</a>
     <div class="footer-line"></div>
@@ -389,15 +395,15 @@
   }
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in');
-        observer.unobserve(entry.target);
-      }
+    const visible = entries.filter(e => e.isIntersecting);
+    visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+    visible.forEach((entry, i) => {
+      setTimeout(() => entry.target.classList.add('animate-in'), i * 100);
+      observer.unobserve(entry.target);
     });
   }, { threshold: 0.08 });
 
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  document.querySelectorAll('.fade-in, .page-footer').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
