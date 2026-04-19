@@ -243,6 +243,16 @@ var PROJECTS = {
     solution: 'Created a vertical motion design at Laundry Service that matched the album\'s energy and the constraints of the Story format — looping, immediate, and built for sound-off viewing.',
     logic: 'Portrait format social video demands a different motion logic than broadcast. Every element had to read clearly in the first second.',
     color: '#1a1a1a',
+    imageColumns: 3,
+    imageMaxHeight: 600,
+    images: [
+      'images/beats-buddy/frame-1.jpg',
+      'images/beats-buddy/frame-2.jpg',
+      'images/beats-buddy/frame-3.jpg',
+      'images/beats-buddy/frame-4.jpg',
+      'images/beats-buddy/frame-5.jpg',
+      'images/beats-buddy/frame-6.jpg',
+    ],
     videos: [
       { id: '432656095', ratio: '9/16' },
     ],
