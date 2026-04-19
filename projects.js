@@ -217,7 +217,7 @@ var PROJECTS = {
   'beats-by-dre-pop': {
     tags: ['motion', 'design', '3d'],
     categoryLabel: 'Motion',
-    title: 'Beats by Dre\nPop',
+    title: 'Beats by Dre\nPop Campaign',
     deliverable: 'Global Campaign — Animation & Design',
     challenge: 'Create animation and design for a global Beats campaign celebrating colorful headphones. The brief: life\'s more fun in color.',
     solution: 'Developed a vibrant motion system using illustration, abstract animation, and color theory. Music by MNEK feat. Hailee Steinfeld drove the pacing and energy.',
@@ -260,7 +260,7 @@ var PROJECTS = {
   'beats-buddy': {
     tags: ['motion'],
     categoryLabel: 'Motion',
-    title: 'Beats Buddy',
+    title: 'Beats by Dre\nSocial',
     deliverable: 'Instagram Story',
     challenge: 'Design a motion piece for Instagram Story format promoting Harlan & Alondra\'s album Buddy for the Beats by Dre social team.',
     solution: 'Created a vertical motion design at Laundry Service that matched the album\'s energy and the constraints of the Story format — looping, immediate, and built for sound-off viewing.',
