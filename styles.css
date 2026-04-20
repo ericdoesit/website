@@ -569,12 +569,12 @@ img.image-thumb {
 }
 
 .credits-block a {
-  color: var(--fg);
-  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
 }
 
 .credits-block a:hover {
-  text-decoration: underline;
+  color: var(--fg);
 }
 
 .section-text {
