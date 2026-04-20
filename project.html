@@ -107,6 +107,8 @@
     grid.innerHTML = p.images
       .map(src => `<img class="image-thumb" src="${src}" loading="eager" alt="">`)
       .join('');
+  } else {
+    document.getElementById('image-grid').style.display = 'none';
   }
 
   if (p.videos && p.videos.length) {
