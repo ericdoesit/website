@@ -37,8 +37,8 @@ var PROJECTS = {
     ],
   },
   'spectrum-sportsnet': {
-    tags: ['motion', 'design'],
-    categoryLabel: 'Broadcast Design',
+    tags: ['motion', 'design', '3d'],
+    categoryLabel: 'Design',
     title: 'Spectrum Sportsnet',
     deliverable: 'Show Packages & Broadcast Design',
     challenge: 'Build a cohesive visual identity system across multiple LA sports teams — Lakers, Dodgers, Galaxy, and Sparks — that works live on air and adapts to every format.',

@@ -442,7 +442,7 @@ border-radius: 12px;
   <p class="image-note fade-in" id="image-note"></p>
 
   <div class="movie-section fade-in">
-    <div class="section-header">
+    <div class="section-header fade-in">
       <span class="section-header__label" id="motion-label">Motion</span>
       <div class="section-header__line"></div>
     </div>
@@ -473,11 +473,13 @@ border-radius: 12px;
   if (p.motionSection) {
     document.getElementById('motion-label').textContent = 'Motion';
     document.getElementById('motion-intro').style.display = 'none';
-    document.getElementById('motion-concepts').innerHTML = p.motionSection.concepts
+    document.getElementById('motion-concepts').innerHTML = (p.motionSection.concepts || [])
       .map(c => `<div><p class="motion-concept__title">${c.title}</p><p class="motion-concept__body">${c.body}</p></div>`)
       .join('');
   } else {
-    document.querySelector('.movie-section .section-header').style.display = 'none';
+    if (!p.videos || !p.videos.length) {
+      document.querySelector('.movie-section .section-header').style.display = 'none';
+    }
     document.getElementById('motion-intro').style.display = 'none';
     document.getElementById('motion-concepts').style.display = 'none';
   }
