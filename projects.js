@@ -440,7 +440,7 @@ var PROJECTS = {
   },
   'parkway-drive-boneyards': {
     tags: ['design', 'motion'],
-    categoryLabel: 'Design',
+    categoryLabel: 'Motion',
     title: 'Parkway Drive\nBoneyards',
     deliverable: 'Music Video',
     challenge: 'Capture the raw intensity of Parkway Drive\'s live performance energy in a music video that matches the relentless pace of the song.',
