@@ -119,12 +119,13 @@
       media.style.gridTemplateColumns = '1fr';
       media.style.maxWidth = `${maxW}px`;
       media.style.margin = '0 auto';
-    } else {
-      const [rw, rh] = (p.videos[0].ratio || '16/9').split('/').map(Number);
-      if (rw > rh) media.style.gridTemplateColumns = '1fr';
     }
     media.innerHTML = p.videos
-      .map(v => `<div class="video-embed" style="aspect-ratio:${v.ratio || '4/5'}"><iframe src="https://player.vimeo.com/video/${v.id}?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>`)
+      .map(v => {
+        const [rw, rh] = (v.ratio || '16/9').split('/').map(Number);
+        const span = rw > rh ? 'grid-column:1/-1;' : '';
+        return `<div class="video-embed" style="${span}aspect-ratio:${v.ratio || '16/9'}"><iframe src="https://player.vimeo.com/video/${v.id}?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>`;
+      })
       .join('');
   }
 
