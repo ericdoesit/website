@@ -93,7 +93,7 @@
       .map(c => `<div><p class="motion-concept__title">${c.title}</p><p class="motion-concept__body">${c.body}</p></div>`)
       .join('');
   } else {
-    if (!p.videos || !p.videos.length) {
+    if (!p.videos || !p.videos.length || p.categoryLabel === 'Motion') {
       document.querySelector('.movie-section .section-header').style.display = 'none';
     }
     document.getElementById('motion-intro').style.display = 'none';
