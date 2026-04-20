@@ -571,3 +571,36 @@ img.image-thumb {
   max-width: 760px;
   margin: 0 auto;
 }
+
+/* ── Lightbox ───────────────────────────────── */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(.12, .23, .5, 1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+.lightbox-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+  transform: scale(0.94);
+  transition: transform 0.3s cubic-bezier(.12, .23, .5, 1);
+}
+
+.lightbox-overlay.open img {
+  transform: scale(1);
+}
