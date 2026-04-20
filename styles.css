@@ -373,6 +373,7 @@ body {
   width: 100%;
   object-fit: cover;
   display: block;
+  cursor: zoom-in;
 }
 
 img.image-thumb {
