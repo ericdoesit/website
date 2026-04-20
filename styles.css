@@ -157,7 +157,7 @@ body {
 @media (max-width: 768px) {
   .header { min-height: unset; }
   .header__headline { font-size: clamp(40px, 13vw, 64px); }
-  .featured-grid { gap: 8px; padding: 0 8px; }
+  .featured-grid { gap: 16px 8px; padding: 0 8px 0 16px; }
 }
 
 /* ── Index: Featured Projects ───────────────── */
@@ -646,9 +646,11 @@ img.image-thumb {
     top: auto !important;
     bottom: 24px;
     transform: none !important;
+    background: rgba(0, 0, 0, 0.25);
   }
   .project-nav-btn--prev { left: calc(50% - 58px); }
   .project-nav-btn--next { left: calc(50% + 6px); right: auto; }
+  .image-grid { gap: 8px; padding: 0 8px 8px; }
 }
 
 /* ── Lightbox ───────────────────────────────── */
