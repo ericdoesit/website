@@ -156,6 +156,7 @@ body {
 @media (max-width: 768px) {
   .header { min-height: unset; }
   .header__headline { font-size: clamp(40px, 13vw, 64px); }
+  
   .featured-grid { gap: 8px; padding: 0; }
   .feature-card { gap: 8px; }
   .feature-desc span:not(.feature-desc__title) { display: none; }
@@ -176,7 +177,7 @@ body {
 .feature-card {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
