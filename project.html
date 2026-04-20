@@ -93,11 +93,15 @@
       .map(c => `<div><p class="motion-concept__title">${c.title}</p><p class="motion-concept__body">${c.body}</p></div>`)
       .join('');
   } else {
-    if (!p.videos || !p.videos.length || p.categoryLabel === 'Motion') {
-      document.querySelector('.movie-section .section-header').style.display = 'none';
+    if (!p.videos || !p.videos.length) {
+      document.querySelector('.movie-section').style.display = 'none';
+    } else {
+      if (p.categoryLabel === 'Motion') {
+        document.querySelector('.movie-section .section-header').style.display = 'none';
+      }
+      document.getElementById('motion-intro').style.display = 'none';
+      document.getElementById('motion-concepts').style.display = 'none';
     }
-    document.getElementById('motion-intro').style.display = 'none';
-    document.getElementById('motion-concepts').style.display = 'none';
   }
 
   if (p.images && p.images.length) {
