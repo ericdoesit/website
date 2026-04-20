@@ -92,8 +92,8 @@ var PROJECTS = {
     ],
   },
   'afterearth': {
-    tags: ['motion'],
-    categoryLabel: 'Title Design',
+    tags: ['motion', 'design', '3d'],
+    categoryLabel: 'Design',
     title: 'After Earth',
     deliverable: 'End Title Sequence',
     challenge: 'Design an end title sequence for a major feature film that sustains visual engagement across the full credits roll while matching the film\'s dramatic, atmospheric tone.',
