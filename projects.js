@@ -7,7 +7,7 @@ var PROJECTS = {
     challenge: 'Create performance marketing assets for life insurance on social — a category most people actively avoid thinking about — that stop the scroll and drive action.',
     solution: 'Three static concepts targeting different buyer objections: Price Over Time (cost urgency), Fixed Cost Q&A (rate certainty), and Seamless Online Access (frictionless sign-up).',
     logic: 'Each concept anchors to a distinct reason-to-buy without overlapping. Together they give media buyers options to test against different audience segments.',
-    imageNote: '* Images are for reference only and used as a proof of concept. Photos sourced from jakestangel.com',
+    imageNote: '* Images are for reference only and used as a proof of concept. Photos sourced from <a href="https://jakestangel.com" target="_blank" rel="noopener">jakestangel.com</a>',
     motionSection: {
       intro: 'I designed and animated two motion concepts for Ethos\' performance marketing efforts.',
       concepts: [
@@ -156,7 +156,7 @@ var PROJECTS = {
   'animated-logos': {
     tags: ['motion'],
     categoryLabel: 'Motion',
-    title: 'Animated Logos',
+    title: 'Beacon Capital',
     deliverable: 'Logo Animation',
     challenge: 'Translate two distinct brand identities into logo animations — one kinetic and abstract, one architectural and precise — each with its own motion logic.',
     solution: 'Dynamic uses a helix animation to convey energy and transformation. Beacon Capital uses a scripted dotted-to-solid stroke effect that mimics architectural drafting.',
@@ -165,6 +165,10 @@ var PROJECTS = {
     videos: [
       { id: '1056590766', ratio: '16/9' },
       { id: '1056591037', ratio: '16/9' },
+    ],
+    credits: [
+      { role: 'Design & Art Direction', name: 'workof.club', url: 'https://workof.club/' },
+      { role: 'Animation', name: 'Eric Zunkley' },
     ],
   },
   'athletic-greens': {
@@ -189,28 +193,78 @@ var PROJECTS = {
     solution: 'Party Packs used flash photography and instant film aesthetics. Vegetarian used vibrant plating with kaleidoscope effects. Delivery placed Taco Bell in grounded everyday scenes. Each campaign produced assets for 1:1, 16:9, and 9:16 formats.',
     logic: 'Social content at this scale requires a system, not a series of one-offs. Each campaign had defined visual rules that let the team produce variants without losing coherence.',
     color: '#702082',
-    images: [
-      'images/taco-bell-organic-social/frame-1.jpg',
-      'images/taco-bell-organic-social/frame-2.jpg',
-      'images/taco-bell-organic-social/frame-3.jpg',
-      'images/taco-bell-organic-social/frame-4.jpg',
-      'images/taco-bell-organic-social/frame-5.jpg',
-      'images/taco-bell-organic-social/frame-6.jpg',
-      'images/taco-bell-organic-social/frame-7.jpg',
-      'images/taco-bell-organic-social/frame-8.jpg',
-      'images/taco-bell-organic-social/frame-9.jpg',
-      'images/taco-bell-organic-social/frame-10.jpg',
-      'images/taco-bell-organic-social/frame-11.jpg',
-      'images/taco-bell-organic-social/frame-12.jpg',
-      'images/taco-bell-organic-social/frame-13.jpg',
-      'images/taco-bell-organic-social/frame-14.jpg',
-      'images/taco-bell-organic-social/frame-15.jpg',
-    ],
-    videos: [
-      { id: '378049810', ratio: '1/1' },
-      { id: '378049827', ratio: '1/1' },
-      { id: '378049794', ratio: '1/1' },
-      { id: '378049779', ratio: '1/1' },
+    sections: [
+      {
+        label: 'Party Packs',
+        blocks: [
+          { type: 'text', body: 'As the Design Director of Food at Deutsch LA, I led the direction for Taco Bell\'s "Party Packs" broadcast spots. The concept was centered around capturing the essence of a party at its most authentic, utilizing flash photography and instant film to convey the feeling of being immersed in the moment. The visuals were a mix of candid and posed shots, featuring subjects engaging with the camera, enjoying tacos, or involved in various playful activities. This project marked our first social media initiative, faced with a very tight budget, which required us to adopt a resourceful approach. We managed to successfully execute the shoot at Steelhead, demonstrating our team\'s ability to deliver high-impact creative work under significant constraints.' },
+          { type: 'images', columns: 4, items: [
+            'images/taco-bell-organic-social/EverydayDinner_9x16_sm2.jpg',
+            'images/taco-bell-organic-social/Friendsgiving_9x16_sm2.jpg',
+            'images/taco-bell-organic-social/GameDay_9x16_sm2.jpg',
+            'images/taco-bell-organic-social/Holidays_9x16_sm2.jpg',
+          ]},
+          { type: 'images', columns: 2, items: [
+            'images/taco-bell-organic-social/frame-1.jpg',
+            'images/taco-bell-organic-social/frame-2.jpg',
+            'images/taco-bell-organic-social/frame-3.jpg',
+            'images/taco-bell-organic-social/frame-4.jpg',
+          ]},
+          { type: 'images', columns: 4, items: [
+            'images/taco-bell-organic-social/1X1_TB_PP_GameDay_Grubhub.gif',
+            'images/taco-bell-organic-social/1X1_TB_PP_GeneralNight_Grubhub.gif',
+            'images/taco-bell-organic-social/1X1_TB_PP_Thanksgiving_Grubhub.gif',
+            'images/taco-bell-organic-social/1X1_TB_PP_Winter_Grubhub.gif',
+          ]},
+          { type: 'images', columns: 4, items: [
+            'images/taco-bell-organic-social/9x16_TB_PP_GameDay_Grubhub.gif',
+            'images/taco-bell-organic-social/9x16_TB_PP_GeneralNight_Grubhub.gif',
+            'images/taco-bell-organic-social/9x16_TB_PP_Thanksgiving_Grubhub.gif',
+            'images/taco-bell-organic-social/9x16_TB_PP_Winter_Grubhub.gif',
+          ]},
+          { type: 'credits', lines: [
+            'Client — Taco Bell',
+            'Agency — Deutsch',
+            'Design Director of Food — Eric Zunkley',
+            'AD/CW — Bryan Abbott, Beau Abbott',
+            'Production — Steelhead',
+            'Director/Photographer — Eric Kaufman, Ben Morris',
+          ]},
+        ],
+      },
+      {
+        label: 'Vegetarian',
+        blocks: [
+          { type: 'text', body: 'In our Taco Bell campaign, we focused on transforming the perception of the brand\'s vegetarian options, presenting them in such a vibrant and engaging way that they became unmissable. Our creative approach involved crafting seductive and visually compelling posts, spotlighting the brand\'s standout vegetarian dishes to capture the audience\'s attention. We aimed to highlight the attractiveness and appeal of these options, producing content that not only stopped viewers in their tracks but also made these choices appear irresistibly appealing. The process involved meticulously photographing beautifully arranged plates of food, followed by enhancing these images with a kaleidoscope effect in post-production, adding an extra layer of intrigue and allure to our presentation.' },
+          { type: 'images', columns: 2, items: [
+            'images/taco-bell-organic-social/frame-5.jpg',
+            'images/taco-bell-organic-social/frame-7.jpg',
+            'images/taco-bell-organic-social/frame-8.jpg',
+            'images/taco-bell-organic-social/frame-9.jpg',
+          ]},
+          { type: 'text', body: 'Utilizing Cinema 4D, we meticulously crafted a kaleidoscope effect, which was then synergistically combined with footage of rotating plates of food. This approach not only elevated the realism of the effect but also augmented the allure of the showcased items. The meticulously designed artful plates of food were initially captured in high-resolution video, ensuring that the base footage was of the highest quality. Subsequently, in post-production, we created the kaleidoscope effect created in Cinema 4D, leveraging its capabilities to produce a mesmerizing, dynamic visual experience.' },
+          { type: 'videos', columns: 3, items: [
+            { id: '378049810', ratio: '1/1' },
+            { id: '378049827', ratio: '1/1' },
+            { id: '378049794', ratio: '1/1' },
+          ]},
+          { type: 'videos', columns: 2, items: [
+            { id: '378049779', ratio: '1/1' },
+            { id: '378049766', ratio: '1/1' },
+          ]},
+        ],
+      },
+      {
+        label: 'Lifestyle Press Images',
+        blocks: [
+          { type: 'images', columns: 2, items: [
+            'images/taco-bell-organic-social/frame-11.jpg',
+            'images/taco-bell-organic-social/frame-13.jpg',
+            'images/taco-bell-organic-social/frame-14.jpg',
+            'images/taco-bell-organic-social/frame-15.jpg',
+          ]},
+        ],
+      },
     ],
   },
   'beats-by-dre-pop': {
