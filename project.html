@@ -154,7 +154,7 @@
   }
 
   function renderSection(sec, i) {
-    const header = i === 0 ? '' : `<div class="section-header fade-in"><span class="section-header__label">${sec.label}</span><div class="section-header__line"></div></div>`;
+    const header = !sec.label ? '' : `<div class="section-header fade-in"><span class="section-header__label">${sec.label}</span><div class="section-header__line"></div></div>`;
     return header + sec.blocks.map(renderBlock).join('');
   }
 

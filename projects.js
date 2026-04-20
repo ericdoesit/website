@@ -385,7 +385,26 @@ var PROJECTS = {
     solution: 'Created 16 style frames across the three series, each exploring different motion logic and visual texture to show range before committing to a direction.',
     logic: 'Logo animation pitches work best when they show a spread of directions rather than one polished answer. Three distinct concepts let the client find their instinct.',
     color: '#1A1A3A',
-    images: Array.from({length: 16}, (_, i) => `images/ratpac/frame-${i+1}.jpg`),
+    sections: [
+      {
+        label: 'Concept 1',
+        blocks: [
+          { type: 'images', items: Array.from({length: 5}, (_, i) => `images/ratpac/frame-${i+1}.jpg`), columns: 2 },
+        ],
+      },
+      {
+        label: 'Concept 2',
+        blocks: [
+          { type: 'images', items: Array.from({length: 6}, (_, i) => `images/ratpac/frame-${i+6}.jpg`), columns: 2 },
+        ],
+      },
+      {
+        label: 'Concept 3',
+        blocks: [
+          { type: 'images', items: Array.from({length: 5}, (_, i) => `images/ratpac/frame-${i+12}.jpg`), columns: 2 },
+        ],
+      },
+    ],
   },
   'audi-imagination': {
     tags: ['design', '3d'],
