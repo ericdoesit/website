@@ -159,7 +159,7 @@ body {
   line-height: 0.8;
   overflow: hidden;
   position: relative;
-  width: 890px;
+  width: clamp(200px, 80vw, 890px);
 }
 
 .hl-c3__slot {
@@ -177,15 +177,11 @@ body {
   to   { transform: translateY(110%); }
 }
 
-@media (max-width: 1024px) {
-  .hl-c3 { width: 85vw; }
-}
-
 @media (max-width: 768px) {
   .header { min-height: unset; }
   .header__headline { font-size: clamp(40px, 13vw, 64px); }
 
-  .hl-c3 { width: 78vw; border-width: 2px; }
+  .hl-c3 { border-width: 2px; }
 
   .featured-grid { gap: 8px; padding: 0; }
   .feature-card { gap: 8px; }
