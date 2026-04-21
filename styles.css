@@ -49,11 +49,16 @@
 }
 
 /* ── Base ───────────────────────────────────── */
+html {
+  overflow-y: scroll;
+}
+
 body {
   background: var(--bg);
   color: var(--fg);
   font-family: 'PP Mori', sans-serif;
 }
+
 
 .page {
   max-width: 1440px;
@@ -140,17 +145,6 @@ body {
   line-height: 0.80;
   letter-spacing: -0.05em;
   text-transform: uppercase;
-  position: relative;
-}
-
-.header__headline::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
-  opacity: 0.5;
-  mix-blend-mode: overlay;
-  pointer-events: none;
 }
 
 .hl-c1 { color: #F0C020; }
@@ -221,6 +215,15 @@ body {
   opacity: 0.5;
   mix-blend-mode: overlay;
   pointer-events: none;
+}
+
+.feature-image__video {
+  position: absolute;
+  inset: 20px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .feature-card:nth-child(1) .feature-image { background: linear-gradient(135deg, #E04EA0 -30%, #3850E0 130%); }
@@ -389,10 +392,16 @@ body {
 /* ── Project: Image grids ───────────────────── */
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(var(--image-columns, 2), 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   padding: 0 20px 20px;
 }
+
+.image-grid-1 { grid-template-columns: 1fr; }
+.image-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.image-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.image-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.image-grid-5 { grid-template-columns: repeat(5, 1fr); }
 
 .image-thumb {
   background: var(--project-color);
@@ -527,15 +536,6 @@ img.image-thumb {
   flex: 1;
   height: 1px;
   background: var(--fg);
-  transform: scaleX(0);
-  transition: transform 1.25s cubic-bezier(0, 0, 0.15, 1);
-}
-
-.footer-line:first-child { transform-origin: right; }
-.footer-line:last-child  { transform-origin: left; }
-
-.page-footer.animate-in .footer-line {
-  transform: scaleX(1);
 }
 
 .footer-btn {
@@ -664,7 +664,7 @@ img.image-thumb {
   }
   .project-nav-btn--prev { left: calc(50% - 58px); }
   .project-nav-btn--next { left: calc(50% + 6px); right: auto; }
-  .image-grid { gap: 8px; padding: 0 8px; }
+  .image-grid { gap: 8px; padding: 0 20px; }
 }
 
 /* ── Lightbox ───────────────────────────────── */

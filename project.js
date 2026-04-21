@@ -6,7 +6,10 @@ document.getElementById('project-challenge').textContent = p.challenge || '';
 document.getElementById('project-solution').textContent = p.solution || '';
 document.getElementById('project-logic').textContent = p.logic || '';
 if (p.imageNote) {
-  document.getElementById('image-note').innerHTML = p.imageNote;
+  const noteEl = document.createElement('p');
+  noteEl.className = 'image-note fade-in';
+  noteEl.innerHTML = p.imageNote;
+  document.getElementById('image-grid').insertAdjacentElement('afterend', noteEl);
 }
 
 if (p.motionSection) {
@@ -29,8 +32,13 @@ if (p.motionSection) {
 
 if (p.images && p.images.length) {
   const grid = document.getElementById('image-grid');
-  if (p.imageColumns) grid.style.setProperty('--image-columns', p.imageColumns);
-  if (p.imageMaxHeight) { grid.style.setProperty('--image-max-height', `${p.imageMaxHeight}px`); grid.classList.add('image-grid--capped'); }
+  const cols = p.imageColumns || 2;
+  grid.classList.add(`image-grid-${cols}`);
+  if (p.imageMaxHeight) {
+    grid.style.setProperty('--image-max-height', `${p.imageMaxHeight}px`);
+    grid.style.setProperty('--image-columns', cols);
+    grid.classList.add('image-grid--capped');
+  }
   grid.innerHTML = p.images
     .map(src => `<img class="image-thumb" src="${src}" loading="eager" alt="">`)
     .join('');
@@ -76,7 +84,7 @@ function renderBlock(block) {
       return `<p class="section-text fade-in">${block.body}</p>`;
     case 'images': {
       const cols = block.columns || 2;
-      return `<div class="image-grid fade-in" style="grid-template-columns:repeat(${cols},1fr)">${block.items.map(src=>`<img class="image-thumb" src="${src}" loading="lazy" alt="">`).join('')}</div>`;
+      return `<div class="image-grid image-grid-${cols} fade-in">${block.items.map(src=>`<img class="image-thumb" src="${src}" loading="lazy" alt="">`).join('')}</div>`;
     }
     case 'quote':
       return `<div class="quote-block fade-in"><p>${block.text}</p></div>`;
@@ -145,7 +153,8 @@ if (p.credits && p.credits.length) {
 
 if (p.sections) {
   document.getElementById('image-grid').style.display = 'none';
-  document.getElementById('image-note').style.display = 'none';
+  const existingNote = document.querySelector('.image-note');
+  if (existingNote) existingNote.style.display = 'none';
   document.querySelector('.movie-section').style.display = 'none';
   document.querySelector('.page-footer').insertAdjacentHTML('beforebegin', p.sections.map((sec, i) => renderSection(sec, i)).join(''));
 }

@@ -145,12 +145,43 @@ var PROJECTS = {
     solution: 'Led motion design across six broadcast segments (YOUnique), hundreds of Facebook/Instagram performance variants, Lottie animations for web and app, and chatbot motion systems.',
     logic: 'At Noom\'s scale, every asset needs to work independently and feel part of the same system. A shared motion language across formats kept the brand coherent without slowing production.',
     color: '#2B6B3E',
-    videos: [
-      { id: '916007265', ratio: '16/9' },
-      { id: '1056911606', ratio: '16/9' },
-      { id: '995510989', ratio: '4/5' },
-      { id: '995518821', ratio: '4/5' },
-      { id: '1056587488', ratio: '4/5' },
+    sections: [
+      {
+        label: 'Broadcast',
+        blocks: [
+          { type: 'video', id: '916007265', ratio: '16/9' },
+          { type: 'text', body: 'YOUnique — At Noom, I played a key role in the "YOUnique" broadcast campaign, designed to spotlight the distinct challenges and needs of individuals. This campaign comprised six distinct segments, each focusing on a different person, with commercials produced in both 15-second and 30-second formats. As a motion designer, my responsibility was to develop and implement a visual strategy that presented a diverse array of individuals, weaving together a tapestry of testimonials. This strategy aimed to highlight Noom\'s dedication to offering personalized support and solutions tailored to the unique journey of each user.' },
+          { type: 'video', id: '1056911606', ratio: '16/9' },
+          { type: 'text', body: 'As part of the YOUnique broadcast campaign at Noom, I developed motion tests to explore a visual language that emphasized individuality and personal journeys. Using rounded-corner squares as a foundational element, I experimented with different animation styles—some moving horizontally, others transitioning through Z-space—to create a dynamic and engaging motion system. These tests played a key role in communicating ideas with stakeholders, helping to refine the campaign\'s visual direction and ensure alignment before full production.' },
+        ],
+      },
+      {
+        label: 'Performance',
+        blocks: [
+          { type: 'text', body: 'During my time on the Noom marketing team, I led animation and collaborated on design for Facebook and Instagram performance videos. Over two years I developed hundreds of concepts — each tailored to specific strategy goals and crafted into 4–6 unique variants to find the top performer.' },
+          { type: 'videos', items: [
+            { id: '995510989', ratio: '4/5' },
+            { id: '995518821', ratio: '4/5' },
+          ], columns: 2 },
+          { type: 'images', columns: 5, items: [
+            'images/noom/1- Thm_Other Con_StoplightWithFoodMotion Style_Functional Form_Video Vis_RibsSalad Copy_NoomIsntAbout (00153).jpg',
+            'images/noom/1- Thm_Other Con_ThisOrThat Style_Analytical Form_Video Vis_ChipsPopcorn Copy_ChangingTheWay (00056).jpg',
+            'images/noom/1_CA-HQ_CT-4x5Vid_AI-NA_IT-Vid15s_IM-People-WomanExercise_LP-Exsf01_Category-Branded_VP-Flexibility_MT-Convenience of Noom_String-WeightEC_PollCopy-NA_TextOverlay-WithNoomExerciseLooks_CTA-GetThePlanThatGetsYou_Freeform-HardExercise-2 (00080).jpg',
+            'images/noom/1_CA-HQ_CT-4x5Vid_AI-NA_IT-Vid30s_IM-slot-machine_LP-Exsf01_Category-Branded_VP-Psychology (Baseline)_MT-Broad_String-CompassV4NoTest_PollCopy-na_TextOverlay-ChangingTheWay_CTA-na_Freeform-na (00050).jpg',
+            'images/noom/1_CA-HQ_CT-Video_AI-NA_IT-Vid30s_IM-EducationalTimeline_LP-Exsf01_Category-Branded_VP-Other_MT-Other_String-MedProductStringV1_PollCopy-NA_TextOverlay-WhyIsEveryoneTalking_CTA-SeeIfYouQualify_Freeform-SET1 (00070).jpg',
+            'images/noom/1_Thm_BeforeAfter_Style_Other_Form_Video_Vis_Food_Copy_HealthyYou- (00203).jpg',
+            'images/noom/1_Thm_NoomIsnt_Style_Other_Form_Video_Vis_Hand_Copy_StartToday (00071).jpg',
+            'images/noom/1_Thm_Other Con_JoyfulEating Style_Other Form_Video Vis_BurgerVideo Copy_YouCanHaveFriesWithThat (00078).jpg',
+            'images/noom/1_Thm_Other Con_ProblemSolutionIteration Style_Other Form_Video Vis_V1 Copy_WeightBoomerangsBack (00094).jpg',
+            'images/noom/1_Thm_Pandemic_ConFogEating_Style_Other_Form_Video_Vis_It (00062).jpg',
+            'images/noom/psychology.jpg',
+            'images/noom/1_Thm_WeightGraph Con_WeightGraph Style_Other Form_Video Vis_WeightGraph Copy_NotFadDieting (00244).jpg',
+            'images/noom/2022_Q2_YT_UK_FogEating- 01 4x5 Final (00075).jpg',
+            'images/noom/4_CA-HQ_CT-1x1Vid_AI-NA_IT-Vid-10s_IM-food-egg_LP-Exsf01_Category-Branded_VP-Sustainability_MT-LongTerm_String-CompassV4_PollCopy-na_TextOverlay-WeightLossThatSticks_CTA-TakeTheQuiz_Freeform-na (00118).jpg',
+            'images/noom/Waffle_01 (00090).jpg',
+          ]},
+        ],
+      },
     ],
   },
   'animated-logos': {

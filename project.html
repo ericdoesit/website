@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project</title>
+  <link rel="icon" type="image/png" href="images/icon_star.png">
   <link rel="preload" href="fonts/PPKyoto-Medium.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="fonts/PPMori-Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="fonts/PPMori-SemiBold.otf" as="font" type="font/otf" crossorigin>
@@ -14,7 +15,7 @@
     const p = window.PROJECTS[id];
     if (!p) location.href = 'index.html';
     document.documentElement.style.setProperty('--project-color', p.color);
-    document.title = p.title.replace('\n', ' ');
+    document.title = 'Eric Zunkley — ' + p.title.replace('\n', ' ');
   </script>
 </head>
 <body>
@@ -46,18 +47,7 @@
     </div>
   </div>
 
-  <div class="image-grid fade-in" id="image-grid">
-    <div class="image-thumb"></div>
-    <div class="image-thumb"></div>
-    <div class="image-thumb"></div>
-    <div class="image-thumb"></div>
-    <div class="image-thumb"></div>
-    <div class="image-thumb"></div>
-    <div class="image-thumb"></div>
-    <div class="image-thumb"></div>
-  </div>
-
-  <p class="image-note fade-in" id="image-note"></p>
+  <div class="image-grid fade-in" id="image-grid"></div>
 
   <div class="movie-section fade-in">
     <div class="section-header fade-in">
