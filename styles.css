@@ -157,8 +157,24 @@ body {
   color: #CC2820;
   padding: 0.02em 0.1em 0.06em;
   line-height: 0.88;
+  overflow: hidden;
+  position: relative;
+}
+
+.hl-c3__slot {
+  display: block;
 }
 .hl-c4 { color: #1E6828; }
+
+@keyframes slotIn {
+  from { transform: translateY(-110%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes slotOut {
+  from { transform: translateY(0); }
+  to   { transform: translateY(110%); }
+}
 
 @media (max-width: 768px) {
   .header { min-height: unset; }

@@ -59,3 +59,40 @@
     if (e.key === 'ArrowRight') showImage(currentIndex + 1);
   });
 })();
+
+(function () {
+  const words = ['effective', 'meaningful', 'bold', 'cute', 'timeless', 'innovative', 'beautiful', 'classy', 'rad', 'sharp', 'clean', 'smooth'];
+  const el = document.querySelector('.hl-c3');
+  if (!el) return;
+
+  let current = 0;
+  const duration = 500;
+  const hold = 2500;
+
+  function next() {
+    const prev = el.querySelector('.hl-c3__slot');
+    const nextIndex = (current + 1) % words.length;
+    current = nextIndex;
+
+    prev.style.animation = `slotOut ${duration}ms cubic-bezier(0, 0, 0.15, 1) forwards`;
+
+    const span = document.createElement('span');
+    span.className = 'hl-c3__slot';
+    span.textContent = words[current];
+    span.style.position = 'absolute';
+    span.style.top = '0';
+    span.style.left = '0';
+    span.style.animation = `slotIn ${duration}ms cubic-bezier(0, 0, 0.15, 1) forwards`;
+    el.appendChild(span);
+
+    setTimeout(() => {
+      prev.remove();
+      span.style.position = '';
+      span.style.top = '';
+      span.style.left = '';
+      span.style.animation = '';
+    }, duration);
+  }
+
+  setInterval(next, hold + duration);
+})();
