@@ -61,7 +61,7 @@
 })();
 
 (function () {
-  const words = ['fearless', 'expressive', 'dynamic', 'vibrant', 'refined', 'effective', 'innovative', 'beautiful', 'elegant', 'timeless', 'impactful', 'engaging'];
+  const words = ['effective', 'fearless', 'expressive', 'dynamic', 'vibrant', 'refined', 'innovative', 'beautiful', 'elegant', 'timeless', 'impactful', 'engaging'];
   const el = document.querySelector('.hl-c3');
   if (!el) return;
 
