@@ -69,7 +69,6 @@ var PROJECTS = {
     images: [
       'images/high-and-tight/frame-1.jpg',
       'images/high-and-tight/frame-2.jpg',
-      'images/high-and-tight/frame-3.jpg',
     ],
     videos: [
       { id: '212961179', ratio: '16/9' },
@@ -84,6 +83,7 @@ var PROJECTS = {
     solution: 'Built a motion package with a warm, editorial feel using found photography and bold typography to ground the segment in the city.',
     logic: 'Spectrum Sportsnet needed segments that could stand on their own tonally. Hometown Call leans warmer and more nostalgic than the harder-edged game coverage.',
     color: '#1A3B6E',
+    imageColumns: 1,
     images: [
       'images/hometowncall/frame-1.jpg',
     ],
@@ -187,7 +187,7 @@ var PROJECTS = {
   'taco-bell-organic-social': {
     tags: ['design'],
     categoryLabel: 'Design',
-    title: 'Taco Bell\nOrganic Social',
+    title: 'Taco Bell\nSocial',
     deliverable: 'Three Social Campaigns',
     challenge: 'Design scroll-stopping social content across three distinct campaigns — Party Packs, Vegetarian, and Delivery — each with its own visual identity and platform requirements.',
     solution: 'Party Packs used flash photography and instant film aesthetics. Vegetarian used vibrant plating with kaleidoscope effects. Delivery placed Taco Bell in grounded everyday scenes. Each campaign produced assets for 1:1, 16:9, and 9:16 formats.',
@@ -337,7 +337,7 @@ var PROJECTS = {
   'beats-by-dre-disney': {
     tags: ['motion', '3d'],
     categoryLabel: 'Motion',
-    title: 'Beats by Dre\n× Disney',
+    title: 'Beats by Dre\nDisney',
     deliverable: 'Internal Proof of Concept',
     challenge: 'Build an internal sizzle reel merging Beats\' signature design language with Disney\'s iconic brand — enough to sell the concept to stakeholders.',
     solution: 'Designed and animated a concept piece that found the intersection between the two brands: bold, premium, and unmistakably fun.',
@@ -357,7 +357,7 @@ var PROJECTS = {
     solution: 'Developed 15 style frames using a posterized, graphic treatment in Photoshop, Illustrator, C4D, and After Effects — capturing the satirical tone through bold typography and period-appropriate design.',
     logic: 'The concept was never produced, but the process of translating a film\'s comedic voice into a visual system is the same whether it ships or not.',
     color: '#8B1A1A',
-    images: Array.from({length: 15}, (_, i) => `images/anchorman-2/frame-${i+1}.jpg`),
+    images: Array.from({length: 14}, (_, i) => `images/anchorman-2/frame-${i+2}.jpg`),
   },
   'barbie': {
     tags: ['design', 'motion', '3d'],
@@ -389,7 +389,6 @@ var PROJECTS = {
       'images/blackbox/frame-1.jpg',
       'images/blackbox/frame-2.jpg',
       'images/blackbox/frame-3.jpg',
-      'images/blackbox/frame-4.jpg',
       'images/blackbox/frame-5.jpg',
       'images/blackbox/frame-6.jpg',
       'images/blackbox/frame-7.jpg',
@@ -404,6 +403,7 @@ var PROJECTS = {
     solution: 'Developed a proof of concept at Picture Mill that established tone, motion language, and visual direction without overcommitting to a finished system.',
     logic: 'Proof-of-concept work is about demonstrating possibility, not delivering a product. The goal is to make a client see something they didn\'t know they wanted.',
     color: '#AA0000',
+    imageColumns: 1,
     images: [
       'images/san-francisco-49ers/frame-1.jpg',
     ],
@@ -417,7 +417,10 @@ var PROJECTS = {
     solution: 'Wall explored found objects and domestic textures arranged as typographic elements. Fall used kinetic dropping motion to convey both comedy and consequence. Developed at Picture Mill.',
     logic: 'Comedy title sequences have to establish tone without undercutting the show\'s emotional honesty. Both concepts worked in opposite directions — one grounded, one kinetic.',
     color: '#C47A3A',
-    images: Array.from({length: 11}, (_, i) => `images/mom/frame-${i+1}.jpg`),
+    images: [
+      'images/mom/frame-1.jpg',
+      ...Array.from({length: 9}, (_, i) => `images/mom/frame-${i+3}.jpg`),
+    ],
   },
   'teenage-mutant-ninja-turtles': {
     tags: ['design'],
@@ -443,7 +446,7 @@ var PROJECTS = {
       {
         label: 'Concept 1',
         blocks: [
-          { type: 'images', items: Array.from({length: 5}, (_, i) => `images/ratpac/frame-${i+1}.jpg`), columns: 2 },
+          { type: 'images', items: ['images/ratpac/frame-1.jpg', ...Array.from({length: 3}, (_, i) => `images/ratpac/frame-${i+3}.jpg`)], columns: 2 },
         ],
       },
       {
@@ -455,7 +458,7 @@ var PROJECTS = {
       {
         label: 'Concept 3',
         blocks: [
-          { type: 'images', items: Array.from({length: 5}, (_, i) => `images/ratpac/frame-${i+12}.jpg`), columns: 2 },
+          { type: 'images', items: Array.from({length: 4}, (_, i) => `images/ratpac/frame-${i+13}.jpg`), columns: 2 },
         ],
       },
     ],
@@ -484,7 +487,26 @@ var PROJECTS = {
     solution: 'Collaborated with illustrator Corey Jennings to translate artwork into a wearable vector design for Walk MS. For the IG rebrand, developed multiple template layouts exploring color, type, and visual direction.',
     logic: 'Nonprofit design has to work on a budget and at scale. The shirt design needed to hold up in production; the IG templates needed to be easy for the team to execute without a designer.',
     color: '#5B2D8E',
-    images: Array.from({length: 7}, (_, i) => `images/walkman/frame-${i+1}.jpg`),
+    sections: [
+      {
+        label: 'Concept Art',
+        blocks: [
+          { type: 'images', items: ['images/walkman/frame-1.jpg'], columns: 1 },
+        ],
+      },
+      {
+        label: 'Final Design',
+        blocks: [
+          { type: 'images', items: ['images/walkman/frame-2.jpg', 'images/walkman/frame-3.jpg', 'images/walkman/frame-4.jpg', 'images/walkman/frame-5.jpg'], columns: 2 },
+        ],
+      },
+      {
+        label: 'Social Presence',
+        blocks: [
+          { type: 'images', items: ['images/walkman/frame-6.jpg', 'images/walkman/frame-7.jpg'], columns: 2 },
+        ],
+      },
+    ],
   },
   'skycoin': {
     tags: ['design', '3d'],
@@ -509,6 +531,16 @@ var PROJECTS = {
     solution: 'Handled animation, design, and compositing at Space 150 in collaboration with The Mill LA — working within a fast-moving production to deliver broadcast-ready motion.',
     logic: 'Anthem spots for major game releases demand precision under pressure. Every frame is scrutinized. The Mill\'s production standards set the bar; the job was to meet it.',
     color: '#1A1A1A',
+    videos: [
+      { id: '1185026554', ratio: '16/9' },
+    ],
+    credits: [
+      { role: 'Agency', name: 'Space 150' },
+      { role: 'CD', name: 'Ned Lampert' },
+      { role: 'AD/CW', name: 'Jacob Anderson, Eric Beard' },
+      { role: 'Production', name: 'The Mill Los Angeles' },
+      { role: 'Animation, Design & Compositing', name: 'Eric Zunkley' },
+    ],
   },
   'parkway-drive-boneyards': {
     tags: ['design', 'motion'],

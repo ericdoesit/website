@@ -140,6 +140,17 @@ body {
   line-height: 0.80;
   letter-spacing: -0.05em;
   text-transform: uppercase;
+  position: relative;
+}
+
+.header__headline::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  pointer-events: none;
 }
 
 .hl-c1 { color: #F0C020; }
@@ -378,7 +389,7 @@ body {
 /* ── Project: Image grids ───────────────────── */
 .image-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(var(--image-columns, 2), 1fr);
   gap: 10px;
   padding: 0 20px 20px;
 }

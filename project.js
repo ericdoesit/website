@@ -51,7 +51,10 @@ if (p.videos && p.videos.length) {
     .map(v => {
       const [rw, rh] = (v.ratio || '16/9').split('/').map(Number);
       const span = rw > rh ? 'grid-column:1/-1;' : '';
-      return `<div class="video-embed" style="${span}aspect-ratio:${v.ratio || '16/9'}"><iframe src="https://player.vimeo.com/video/${v.id}?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>`;
+      const src = v.platform === 'youtube' ? `https://www.youtube.com/embed/${v.id}` : `https://player.vimeo.com/video/${v.id}?title=0&byline=0&portrait=0`;
+      const allow = v.platform === 'youtube' ? 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' : 'autoplay; fullscreen; picture-in-picture';
+      const ref = v.platform === 'youtube' ? ' referrerpolicy="strict-origin-when-cross-origin"' : '';
+      return `<div class="video-embed" style="${span}aspect-ratio:${v.ratio || '16/9'}"><iframe src="${src}" allow="${allow}"${ref} allowfullscreen></iframe></div>`;
     })
     .join('');
 }
