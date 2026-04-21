@@ -181,7 +181,7 @@ body {
   .header { min-height: unset; }
   .header__headline { font-size: clamp(40px, 13vw, 64px); }
 
-  .hl-c3 { width: 85vw; }
+  .hl-c3 { width: 85vw; border-width: 2px; }
 
   .featured-grid { gap: 8px; padding: 0; }
   .feature-card { gap: 8px; }
