@@ -136,7 +136,7 @@ body {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  padding: 40px 20px;
+  padding: 20px;
   min-height: 420px;
 }
 
