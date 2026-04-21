@@ -159,7 +159,7 @@ body {
   line-height: 0.8;
   overflow: hidden;
   position: relative;
-  width: clamp(200px, 80vw, 890px);
+  width: clamp(200px, 80vw, 712px);
 }
 
 .hl-c3__slot {
