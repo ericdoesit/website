@@ -155,10 +155,11 @@ body {
   display: inline-block;
   border: 4px solid #CC2820;
   color: #CC2820;
-  padding: 0.02em 0.1em 0.06em;
-  line-height: 0.88;
+  padding: 0.4em 0.1em 0.4em;
+  line-height: 0.8;
   overflow: hidden;
   position: relative;
+  width: 890px;
 }
 
 .hl-c3__slot {

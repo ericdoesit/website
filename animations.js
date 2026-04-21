@@ -65,16 +65,22 @@
   const el = document.querySelector('.hl-c3');
   if (!el) return;
 
+  const initial = el.querySelector('.hl-c3__slot');
+  initial.style.position = 'absolute';
+  initial.style.top = '0';
+  initial.style.left = '0';
+
   let current = 0;
-  const duration = 500;
-  const hold = 2500;
+  const duration = 300;
+  const hold = 3000;
+  const easing = 'cubic-bezier(0.68, -0.55, 0.265, 1.55)';
 
   function next() {
     const prev = el.querySelector('.hl-c3__slot');
     const nextIndex = (current + 1) % words.length;
     current = nextIndex;
 
-    prev.style.animation = `slotOut ${duration}ms cubic-bezier(0, 0, 0.15, 1) forwards`;
+    prev.style.animation = `slotOut ${duration}ms ${easing} forwards`;
 
     const span = document.createElement('span');
     span.className = 'hl-c3__slot';
@@ -82,14 +88,11 @@
     span.style.position = 'absolute';
     span.style.top = '0';
     span.style.left = '0';
-    span.style.animation = `slotIn ${duration}ms cubic-bezier(0, 0, 0.15, 1) forwards`;
+    span.style.animation = `slotIn ${duration}ms ${easing} forwards`;
     el.appendChild(span);
 
     setTimeout(() => {
       prev.remove();
-      span.style.position = '';
-      span.style.top = '';
-      span.style.left = '';
       span.style.animation = '';
     }, duration);
   }
