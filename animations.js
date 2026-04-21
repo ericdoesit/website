@@ -71,11 +71,18 @@
   initial.style.left = '0';
 
   let current = 0;
+  let iterations = 0;
   const duration = 300;
   const hold = 3000;
-  const easing = 'cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+  // Realistic heavy drop: Fast acceleration, sharp impact, 2 diminishing bounces.
+  const easing = 'linear(0, 0.006, 0.025, 0.055, 0.098, 0.152, 0.219, 0.297, 0.387, 0.488, 0.601, 0.725, 0.861, 1, 0.91, 0.85, 0.82, 0.81, 0.82, 0.85, 0.91, 1, 0.97, 0.95, 0.95, 0.97, 1)';
+  // const easing = 'cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+
 
   function next() {
+    if (iterations >= words.length - 1) return;
+    iterations++;
+
     const prev = el.querySelector('.hl-c3__slot');
     const nextIndex = (current + 1) % words.length;
     current = nextIndex;
@@ -95,7 +102,11 @@
       prev.remove();
       span.style.animation = '';
     }, duration);
+
+    if (iterations < words.length - 1) {
+      setTimeout(next, hold + duration);
+    }
   }
 
-  setInterval(next, hold + duration);
+  setTimeout(next, hold + duration);
 })();
