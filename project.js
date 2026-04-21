@@ -76,7 +76,7 @@ function renderBlock(block) {
       const embeds = block.items.map(v =>
         `<div class="video-embed" style="aspect-ratio:${v.ratio||'1/1'}"><iframe src="https://player.vimeo.com/video/${v.id}?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>`
       ).join('');
-      return `<div class="fade-in" style="display:grid;grid-template-columns:repeat(${cols},1fr);gap:10px;padding:0 20px 20px">${embeds}</div>`;
+      return `<div class="fade-in" style="display:grid;grid-template-columns:repeat(${cols},1fr);gap:10px;padding:10px 20px">${embeds}</div>`;
     }
     case 'credits':
       return `<div class="credits-block fade-in"><p class="credits-label">Credits</p>${block.lines.map(l=>`<p>${l}</p>`).join('')}</div>`;
@@ -124,7 +124,7 @@ if (window.matchMedia('(min-width: 769px)').matches) {
   window.addEventListener('scroll', () => {
     const delta = window.scrollY - lastScrollY;
     lastScrollY = window.scrollY;
-    offset = Math.max(-400, Math.min(400, offset - delta * 0.22));
+    offset = Math.max(-800, Math.min(800, offset - delta * 0.22));
 
     navBtns.forEach(b => {
       b.style.transition = hoverTransition;

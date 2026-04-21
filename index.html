@@ -47,25 +47,31 @@
           <span>Performance and broadcast creative for a behavior-change health platform.</span>
         </div>
       </a>
-      <a class="feature-card" href="project.html">
-        <div class="feature-image"></div>
+      <a class="feature-card" href="project.html?id=taco-bell-organic-social">
+        <div class="feature-image">
+          <img class="feature-image__video" src="images/taco-bell-organic-social/frame-3.jpg" alt="Taco Bell Social">
+        </div>
         <div class="feature-desc">
-          <span class="feature-desc__title">Title</span>
-          <span>Contrary to popular belief.</span>
+          <span class="feature-desc__title">Taco Bell Social</span>
+          <span>Three social campaigns — Party Packs, Vegetarian, and Lifestyle — for Taco Bell.</span>
         </div>
       </a>
-      <a class="feature-card" href="project.html">
-        <div class="feature-image"></div>
+      <a class="feature-card" href="project.html?id=beats-by-dre-pop">
+        <div class="feature-image">
+          <img class="feature-image__video" src="images/beats-by-dre-pop/pop-thumb.jpg" alt="Beats by Dre Pop">
+        </div>
         <div class="feature-desc">
-          <span class="feature-desc__title">Title</span>
-          <span>Contrary to popular belief.</span>
+          <span class="feature-desc__title">Beats by Dre Pop</span>
+          <span>Global campaign celebrating colorful headphones with vibrant motion design.</span>
         </div>
       </a>
-      <a class="feature-card" href="project.html">
-        <div class="feature-image"></div>
+      <a class="feature-card" href="project.html?id=afterearth">
+        <div class="feature-image">
+          <img class="feature-image__video" src="images/afterearth/thumb.jpg" alt="After Earth">
+        </div>
         <div class="feature-desc">
-          <span class="feature-desc__title">Title</span>
-          <span>Contrary to popular belief. Long descriptions don't actually help describe the project.</span>
+          <span class="feature-desc__title">After Earth</span>
+          <span>End title sequence for a major feature film with organic motion and environmental textures.</span>
         </div>
       </a>
     </div>
@@ -89,12 +95,13 @@
       <a class="project-item" href="project.html?id=spectrum-sportsnet" data-tags="motion design"><span>Spectrum Sportsnet</span></a>
       <a class="project-item" href="project.html?id=high-and-tight" data-tags="motion design"><span>High and Tight</span></a>
       <a class="project-item" href="project.html?id=hometowncall" data-tags="motion design"><span>Hometown Call</span></a>
-      <a class="project-item" href="project.html?id=afterearth" data-tags="motion"><span>After Earth</span></a>
+      <a class="project-item" href="project.html?id=afterearth" data-tags="motion design 3d"><span>After Earth</span></a>
       <a class="project-item" href="project.html?id=taco-bell-broadcast" data-tags="motion design"><span>Taco Bell Broadcast</span></a>
+      <a class="project-item" href="project.html?id=noom" data-tags="motion"><span>Noom</span></a>
       <a class="project-item" href="project.html?id=animated-logos" data-tags="motion design"><span>Beacon Capital</span></a>
       <a class="project-item" href="project.html?id=athletic-greens" data-tags="motion"><span>Athletic Greens</span></a>
       <a class="project-item" href="project.html?id=taco-bell-organic-social" data-tags="design motion"><span>Taco Bell Social</span></a>
-      <a class="project-item" href="project.html?id=beats-by-dre-pop" data-tags="motion design"><span>Beats by Dre - Pop</span></a>
+      <a class="project-item" href="project.html?id=beats-by-dre-pop" data-tags="motion design 3d"><span>Beats by Dre - Pop</span></a>
       <a class="project-item" href="project.html?id=beats-buddy" data-tags="motion"><span>Beats by Dre - Social</span></a>
       <a class="project-item" href="project.html?id=beats-by-dre-disney" data-tags="motion design"><span>Beats by Dre - Disney</span></a>
       <a class="project-item" href="project.html?id=anchorman-2" data-tags="design motion"><span>Anchorman 2</span></a>
@@ -113,8 +120,27 @@
   </section>
 
 </div>
+<script src="projects.js"></script>
 <script>
-  const projectItems = document.querySelectorAll('.project-item');
+  const projectsContainer = document.querySelector('.projects');
+  let projectItems = Array.from(document.querySelectorAll('.project-item'));
+
+  // Sort by year descending (if PROJECTS data is available)
+  if (typeof PROJECTS !== 'undefined') {
+    projectItems.sort((a, b) => {
+      const getId = (href) => href.split('id=')[1];
+      const yearA = PROJECTS[getId(a.href)]?.year || 0;
+      const yearB = PROJECTS[getId(b.href)]?.year || 0;
+      return yearB - yearA;
+    });
+
+    // Re-append sorted items to container
+    projectItems.forEach(item => projectsContainer.appendChild(item));
+
+    // Refresh reference after DOM reordering
+    projectItems = Array.from(document.querySelectorAll('.project-item'));
+  }
+
   projectItems.forEach(item => {
     item.addEventListener('mouseover', () => {
       item.classList.remove('dim');

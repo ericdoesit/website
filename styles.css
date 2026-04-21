@@ -61,6 +61,7 @@ body {
 
 
 .page {
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   padding-top: 20px;
@@ -83,7 +84,8 @@ body {
 .section-header {
   display: flex;
   align-items: center;
-  padding: 0 20px 40px;
+  padding-inline: 20px;
+  padding-block: clamp(24px, 4vw, 40px); 
 }
 
 .section-header__label {
@@ -100,7 +102,7 @@ body {
 .section-header__line {
   flex: 1;
   height: 1px;
-  background: var(--fg);
+  background: #999999;
   margin-left: 6px;
   transform: scaleX(0);
   transform-origin: left;
@@ -235,9 +237,9 @@ body {
 }
 
 .feature-card:nth-child(1) .feature-image { background: linear-gradient(135deg, #E04EA0 -30%, #3850E0 130%); }
-.feature-card:nth-child(2) .feature-image { background: linear-gradient(145deg, #E87020 -30%, #6040C8 130%); }
+.feature-card:nth-child(2) .feature-image { background: linear-gradient(120deg, #C07FE0 -30%, #1A9040 130%); }
 .feature-card:nth-child(3) .feature-image { background: linear-gradient(160deg, #F0B020 -30%, #E82020 130%); }
-.feature-card:nth-child(4) .feature-image { background: linear-gradient(120deg, #C07FE0 -30%, #1A9040 130%); }
+.feature-card:nth-child(4) .feature-image { background: linear-gradient(145deg, #E87020 -30%, #6040C8 130%); }
 
 .feature-card:hover .feature-image {
   opacity: 0.85;
@@ -319,7 +321,7 @@ body {
   content: '';
   display: block;
   height: 1px;
-  background: var(--fg);
+  background: #999999;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 1.25s cubic-bezier(0, 0, 0.15, 1);
@@ -336,11 +338,11 @@ body {
 }
 
 .project-item span {
-  transition: opacity 0.2s ease, filter 0.2s ease;
+  transition: opacity 0.2s ease, filter 0.2s ease, color 0.3s cubic-bezier(0, 0, 0.15, 1);
 }
 
 .project-item.dim span {
-  opacity: 0.2;
+  color: #333;
 }
 
 .project-item.filtered-out {
@@ -349,7 +351,7 @@ body {
 
 /* ── Project: Intro ─────────────────────────── */
 .intro {
-  padding: 20px 20px 32px;
+  padding: 20px;
 }
 
 .intro__title {
@@ -357,27 +359,31 @@ body {
   font-size: clamp(42px, 6.67vw, 96px);
   font-weight: 700;
   line-height: 0.88;
-  max-width: 779px;
+  max-width: 800px;
   text-transform: capitalize;
-  margin-bottom: 16px;
+  /* Reduced slightly to keep the title connected to the deliverable */
+  margin-bottom: clamp(12px, 2vw, 20px); 
 }
 
 .intro__deliverable {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
-  margin-bottom: 48px;
+  /* Matches your global section padding for perfect rhythm */
+  margin-bottom: clamp(24px, 4vw, 40px); 
 }
 
 .intro__csl {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
+  /* Harmonizes the internal grid spacing with the rest of the site */
+  gap: clamp(20px, 3vw, 40px); 
 }
 
 .intro__csl-item {
-  border-top: 1px solid var(--fg);
+  border-top: 1px solid #999999;
   padding-top: 16px;
+  margin-bottom: clamp(24px, 4vw, 40px);
 }
 
 .intro__csl-label {
@@ -402,7 +408,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  padding: 0 20px 20px;
+  padding: 10px 20px;
 }
 
 .image-grid-1 { grid-template-columns: 1fr; }
@@ -455,13 +461,11 @@ img.image-thumb {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  padding: 0 20px;
   justify-items: center;
 }
 
 .video-embed {
   position: relative;
-  aspect-ratio: 4 / 5;
   width: 100%;
   border-radius: 12px;
   overflow: hidden;
@@ -478,8 +482,10 @@ img.image-thumb {
 .image-note {
   font-size: 16px;
   color: #999999;
-  padding: 12px;
   line-height: 1.4;
+  padding-inline: 20px; 
+  /* Halved from 24px/4vw/40px to keep it tight and consistent with text */
+  padding-block: clamp(12px, 2vw, 20px); 
 }
 
 .image-note a {
@@ -493,7 +499,7 @@ img.image-thumb {
 
 /* ── Project: Movie section ─────────────────── */
 .movie-section {
-  padding-bottom: 40px;
+  padding: 20px;
 }
 
 .movie-placeholder {
@@ -501,8 +507,6 @@ img.image-thumb {
   border-radius: 12px;
   aspect-ratio: 16 / 9;
   width: 100%;
-  max-width: 1400px;
-  margin: 0 20px;
 }
 
 .motion-intro {
@@ -514,7 +518,7 @@ img.image-thumb {
 .motion-concepts {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 10px;
   padding: 20px 20px 40px;
 }
 
@@ -537,13 +541,15 @@ img.image-thumb {
 .page-footer {
   display: flex;
   align-items: center;
-  padding: 40px 20px 20vh;
+  padding-inline: 20px;
+  padding-top: clamp(24px, 4vw, 40px);
+  padding-bottom: clamp(80px, 20vh, 110px);
 }
 
 .footer-line {
   flex: 1;
   height: 1px;
-  background: var(--fg);
+  background: #999999;
 }
 
 .footer-btn {
@@ -569,12 +575,14 @@ img.image-thumb {
 }
 
 /* ── Project: Sections block system ─────────── */
-.section-block-video { padding: 0 20px 20px; }
+.section-block-video {
+  padding: 20px;
+}
+
 .section-block-video .video-embed { border-radius: 12px; overflow: hidden; }
 
 .credits-block {
-  padding: 32px 20px 48px;
-  border-top: 1px solid #2a2a2a;
+  padding: 20px;
 }
 
 .credits-block .credits-label {
@@ -582,7 +590,7 @@ img.image-thumb {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #555;
+  color: #333;
   margin-bottom: 12px;
 }
 
@@ -602,7 +610,10 @@ img.image-thumb {
 }
 
 .section-text {
-  padding: 0 20px 32px;
+  padding-inline: 20px;
+  /* Each value is exactly half of your previous 24px / 4vw / 40px */
+  padding-block: clamp(12px, 2vw, 20px); 
+  
   font-size: 16px;
   line-height: 1.4;
   color: #999999;
@@ -672,7 +683,7 @@ img.image-thumb {
   }
   .project-nav-btn--prev { left: calc(50% - 58px); }
   .project-nav-btn--next { left: calc(50% + 6px); right: auto; }
-  .image-grid { gap: 8px; padding: 0 20px; }
+  .image-grid { gap: 10px; }
 }
 
 /* ── Lightbox ───────────────────────────────── */

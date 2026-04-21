@@ -1,5 +1,6 @@
 var PROJECTS = {
   'ethos': {
+    year: 2025,
     tags: ['design', 'motion'],
     categoryLabel: 'Design',
     title: 'Ethos',
@@ -37,6 +38,7 @@ var PROJECTS = {
     ],
   },
   'spectrum-sportsnet': {
+    year: 2017,
     tags: ['motion', 'design', '3d'],
     categoryLabel: 'Design',
     title: 'Spectrum Sportsnet',
@@ -58,6 +60,7 @@ var PROJECTS = {
     ],
   },
   'high-and-tight': {
+    year: 2017,
     tags: ['design', 'motion'],
     categoryLabel: 'Design',
     title: 'High and Tight',
@@ -75,6 +78,7 @@ var PROJECTS = {
     ],
   },
   'hometowncall': {
+    year: 2017,
     tags: ['design', 'motion'],
     categoryLabel: 'Design',
     title: 'Hometown Call',
@@ -92,6 +96,7 @@ var PROJECTS = {
     ],
   },
   'afterearth': {
+    year: 2014,
     tags: ['motion', 'design', '3d'],
     categoryLabel: 'Design',
     title: 'After Earth',
@@ -115,6 +120,7 @@ var PROJECTS = {
     ],
   },
   'taco-bell-broadcast': {
+    year: 2019,
     tags: ['design'],
     categoryLabel: 'Design',
     title: 'Taco Bell\nBroadcast',
@@ -137,6 +143,7 @@ var PROJECTS = {
   },
 
   'noom': {
+    year: 2024,
     tags: ['motion'],
     categoryLabel: 'Motion',
     title: 'Noom',
@@ -185,6 +192,7 @@ var PROJECTS = {
     ],
   },
   'animated-logos': {
+    year: 2024,
     tags: ['motion'],
     categoryLabel: 'Motion',
     title: 'Beacon Capital',
@@ -203,6 +211,7 @@ var PROJECTS = {
     ],
   },
   'athletic-greens': {
+    year: 2021,
     tags: ['design', 'motion'],
     categoryLabel: 'Motion',
     title: 'Athletic Greens',
@@ -216,6 +225,7 @@ var PROJECTS = {
     ],
   },
   'taco-bell-organic-social': {
+    year: 2019,
     tags: ['design'],
     categoryLabel: 'Design',
     title: 'Taco Bell\nSocial',
@@ -299,6 +309,7 @@ var PROJECTS = {
     ],
   },
   'beats-by-dre-pop': {
+    year: 2017,
     tags: ['motion', 'design', '3d'],
     categoryLabel: 'Motion',
     title: 'Beats by Dre\nPop',
@@ -342,6 +353,7 @@ var PROJECTS = {
     ],
   },
   'beats-buddy': {
+    year: 2018,
     tags: ['motion'],
     categoryLabel: 'Motion',
     title: 'Beats by Dre\nSocial',
@@ -366,6 +378,7 @@ var PROJECTS = {
     ],
   },
   'beats-by-dre-disney': {
+    year: 2018,
     tags: ['motion', '3d'],
     categoryLabel: 'Motion',
     title: 'Beats by Dre\nDisney',
@@ -380,6 +393,7 @@ var PROJECTS = {
   },
 
   'anchorman-2': {
+    year: 2014,
     tags: ['design', '3d'],
     categoryLabel: 'Design',
     title: 'Anchorman 2',
@@ -388,9 +402,10 @@ var PROJECTS = {
     solution: 'Developed 15 style frames using a posterized, graphic treatment in Photoshop, Illustrator, C4D, and After Effects — capturing the satirical tone through bold typography and period-appropriate design.',
     logic: 'The concept was never produced, but the process of translating a film\'s comedic voice into a visual system is the same whether it ships or not.',
     color: '#8B1A1A',
-    images: Array.from({length: 14}, (_, i) => `images/anchorman-2/frame-${i+2}.jpg`),
+    images: Array.from({length: 14}, (_, i) => `images/anchorman-2/frame-${i+1}.jpg`),
   },
   'barbie': {
+    year: 2014,
     tags: ['design', 'motion', '3d'],
     categoryLabel: 'Design',
     title: 'Barbie',
@@ -408,6 +423,7 @@ var PROJECTS = {
     ],
   },
   'blackbox': {
+    year: 2014,
     tags: ['design', '3d'],
     categoryLabel: 'Design',
     title: 'Black Box',
@@ -426,6 +442,7 @@ var PROJECTS = {
     ],
   },
   'san-francisco-49ers': {
+    year: 2014,
     tags: ['design', '3d'],
     categoryLabel: 'Design',
     title: 'San Francisco 49ers',
@@ -440,6 +457,7 @@ var PROJECTS = {
     ],
   },
   'mom': {
+    year: 2014,
     tags: ['design', '3d'],
     categoryLabel: 'Design',
     title: 'Mom',
@@ -454,6 +472,7 @@ var PROJECTS = {
     ],
   },
   'teenage-mutant-ninja-turtles': {
+    year: 2014,
     tags: ['design'],
     categoryLabel: 'Design',
     title: 'Teenage Mutant\nNinja Turtles',
@@ -465,6 +484,7 @@ var PROJECTS = {
     images: Array.from({length: 18}, (_, i) => `images/teenage-mutant-ninja-turtles/frame-${i+1}.jpg`),
   },
   'ratpac': {
+    year: 2014,
     tags: ['design', '3d'],
     categoryLabel: 'Design',
     title: 'Ratpac\nEntertainment',
@@ -495,6 +515,7 @@ var PROJECTS = {
     ],
   },
   'audi-imagination': {
+    year: 2011,
     tags: ['design', '3d'],
     categoryLabel: 'Design',
     title: 'Audi\nImagination',
@@ -510,6 +531,7 @@ var PROJECTS = {
   },
 
   'walkman': {
+    year: 2021,
     tags: ['design'],
     categoryLabel: 'Design',
     title: 'Walkman',
@@ -540,6 +562,7 @@ var PROJECTS = {
     ],
   },
   'skycoin': {
+    year: 2018,
     tags: ['design', '3d'],
     categoryLabel: 'Design',
     title: 'Skywire\nMesh Internet',
@@ -554,6 +577,7 @@ var PROJECTS = {
     ],
   },
   'black-ops-4-anthem': {
+    year: 2018,
     tags: ['motion'],
     categoryLabel: 'Motion',
     title: 'Black Ops 4\nAnthem',
@@ -574,6 +598,7 @@ var PROJECTS = {
     ],
   },
   'parkway-drive-boneyards': {
+    year: 2008,
     tags: ['design', 'motion'],
     categoryLabel: 'Motion',
     title: 'Parkway Drive\nBoneyards',
@@ -585,46 +610,5 @@ var PROJECTS = {
     videos: [
       { id: '9212257', ratio: '16/9' },
     ],
-  },
-
-  'a-little-flexibility': {
-    tags: ['design', 'motion'],
-    title: 'A Little Flexibility\nOr A Lot',
-    deliverable: 'Deliverable TBD',
-    challenge: 'Challenge TBD',
-    solution: 'Solution TBD',
-    logic: 'Logic TBD',
-    shortDescription: 'Frow itself, let it be sorrow; let him love it; let him pursue it.',
-    color: '#ad2c1c',
-  },
-  'in-motion': {
-    tags: ['motion'],
-    title: 'In Motion',
-    deliverable: 'Deliverable TBD',
-    challenge: 'Challenge TBD',
-    solution: 'Solution TBD',
-    logic: 'Logic TBD',
-    shortDescription: 'Every frame is a decision. This project explores the space between stillness and movement.',
-    color: '#d35b2c',
-  },
-  'depth-study': {
-    tags: ['3d', 'motion'],
-    title: 'Depth Study',
-    deliverable: 'Deliverable TBD',
-    challenge: 'Challenge TBD',
-    solution: 'Solution TBD',
-    logic: 'Logic TBD',
-    shortDescription: 'Light, shadow, and material render what the eye expects the hand to feel.',
-    color: '#1d5091',
-  },
-  'product-zero': {
-    tags: ['product', 'design'],
-    title: 'Product Zero',
-    deliverable: 'Deliverable TBD',
-    challenge: 'Challenge TBD',
-    solution: 'Solution TBD',
-    logic: 'Logic TBD',
-    shortDescription: 'Before the interface, before the brand — the object itself.',
-    color: '#1d6f31',
   },
 };
