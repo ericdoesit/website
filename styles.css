@@ -171,7 +171,7 @@ body {
 }
 
 @media (max-width: 900px) {
-  .hl-c3 { width: clamp(200px, 75vw, 750px); }
+  .hl-c3 { width: clamp(200px, 59vw, 750px); }
 }
 
 @media (max-width: 768px) {
@@ -194,6 +194,7 @@ body {
   .header { min-height: unset; }
   .header__headline { font-size: clamp(40px, 13vw, 64px); }
 
+  .featured-projects { padding-bottom: 0; }
   .featured-grid { gap: 8px; padding: 0; }
   .feature-card { gap: 8px; }
   .feature-desc span:not(.feature-desc__title) { display: none; }
@@ -201,7 +202,7 @@ body {
 
 /* ── Index: Featured Projects ───────────────── */
 .featured-projects {
-  padding-bottom: 40px;
+  padding-bottom: clamp(0px, 5vw, 20px);
 }
 
 .featured-grid {
@@ -281,7 +282,7 @@ body {
   gap: 4px;
   font-size: 16px;
   line-height: 1.4;
-  padding: 16px 0 16px 0;
+  padding: 10px 0 10px 0;
 }
 
 .feature-desc__title {
@@ -529,7 +530,7 @@ img.image-thumb {
 
 /* ── Project: Movie section ─────────────────── */
 .movie-section {
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .movie-placeholder {
