@@ -202,7 +202,7 @@ body {
 
 /* ── Index: Featured Projects ───────────────── */
 .featured-projects {
-  padding-bottom: clamp(0px, 5vw, 20px);
+  padding-bottom: 0;
 }
 
 .featured-grid {
@@ -281,7 +281,7 @@ body {
   flex-direction: column;
   gap: 4px;
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 0;
   padding: 10px 0 10px 0;
 }
 
