@@ -137,7 +137,9 @@ body {
   grid-template-columns: 1fr auto;
   align-items: center;
   padding: 0 20px;
-  min-height: 420px;
+
+  min-height: clamp(200px, 50vh, 420px);
+  /* min-height: 420px; */
 }
 
 .header__headline {
@@ -208,8 +210,8 @@ body {
 .featured-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  padding: 0 20px;
+  gap: clamp(8px, 0.58vw, 10px);
+  padding: 0 clamp(10px, 1.16vw, 20px);
 }
 
 .feature-card {
@@ -281,8 +283,8 @@ body {
   flex-direction: column;
   gap: 4px;
   font-size: 16px;
-  line-height: 0;
-  padding: 15px 0 15px 0;
+  line-height: 1;
+  padding: clamp(14px, 0.93vw, 16px) 0;
 }
 
 .feature-desc__title {
@@ -337,9 +339,9 @@ body {
   text-decoration: none;
   color: inherit;
   font-family: 'PP Kyoto', sans-serif;
-  font-size: clamp(22px, 3.33vw, 46px);
-  font-weight: 700;
-  line-height: 1.77;
+  font-size: clamp(22px, 3.33vw, 30px);
+  font-weight: 500;
+  line-height: 2;
   cursor: pointer;
   opacity: 0;
   transform: translateY(20px);
@@ -369,7 +371,7 @@ body {
 }
 
 .project-item span {
-  transition: opacity 0.2s ease, filter 0.2s ease, color 0.3s cubic-bezier(0, 0, 0.15, 1);
+  transition: opacity 0.5s ease, filter 0.5s ease, color 0.6s cubic-bezier(0, 0, 0.15, 1);
 }
 
 .project-item.dim span {
@@ -392,7 +394,6 @@ body {
   line-height: 0.88;
   max-width: 800px;
   text-transform: capitalize;
-  /* Reduced slightly to keep the title connected to the deliverable */
   margin-bottom: clamp(12px, 2vw, 20px); 
 }
 
@@ -400,14 +401,12 @@ body {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
-  /* Matches your global section padding for perfect rhythm */
   margin-bottom: clamp(24px, 4vw, 40px); 
 }
 
 .intro__csl {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* Harmonizes the internal grid spacing with the rest of the site */
   gap: clamp(20px, 3vw, 40px); 
 }
 
@@ -642,7 +641,6 @@ img.image-thumb {
 
 .section-text {
   padding-inline: 20px;
-  /* Each value is exactly half of your previous 24px / 4vw / 40px */
   padding-block: clamp(12px, 2vw, 20px); 
   
   font-size: 16px;
