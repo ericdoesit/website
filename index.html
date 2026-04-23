@@ -92,26 +92,26 @@
     </div>
     <div class="projects">
       <a class="project-item" href="project.html?id=ethos" data-tags="design motion"><span>Ethos</span></a>
-      <a class="project-item" href="project.html?id=spectrum-sportsnet" data-tags="motion design"><span>Spectrum Sportsnet</span></a>
+      <a class="project-item" href="project.html?id=spectrum-sportsnet" data-tags="motion design 3d"><span>Spectrum Sportsnet</span></a>
       <a class="project-item" href="project.html?id=high-and-tight" data-tags="motion design"><span>High and Tight</span></a>
       <a class="project-item" href="project.html?id=hometowncall" data-tags="motion design"><span>Hometown Call</span></a>
       <a class="project-item" href="project.html?id=afterearth" data-tags="motion design 3d"><span>After Earth</span></a>
       <a class="project-item" href="project.html?id=taco-bell-broadcast" data-tags="motion design"><span>Taco Bell Broadcast</span></a>
-      <a class="project-item" href="project.html?id=noom" data-tags="motion"><span>Noom</span></a>
-      <a class="project-item" href="project.html?id=animated-logos" data-tags="motion design"><span>Beacon Capital</span></a>
-      <a class="project-item" href="project.html?id=athletic-greens" data-tags="motion"><span>Athletic Greens</span></a>
+      <a class="project-item" href="project.html?id=noom" data-tags="motion product"><span>Noom</span></a>
+      <a class="project-item" href="project.html?id=animated-logos" data-tags="motion"><span>Beacon Capital</span></a>
+      <a class="project-item" href="project.html?id=athletic-greens" data-tags="motion design"><span>Athletic Greens</span></a>
       <a class="project-item" href="project.html?id=taco-bell-organic-social" data-tags="design motion"><span>Taco Bell Social</span></a>
       <a class="project-item" href="project.html?id=beats-by-dre-pop" data-tags="motion design 3d"><span>Beats by Dre - Pop</span></a>
       <a class="project-item" href="project.html?id=beats-buddy" data-tags="motion"><span>Beats by Dre - Social</span></a>
       <a class="project-item" href="project.html?id=beats-by-dre-disney" data-tags="motion design"><span>Beats by Dre - Disney</span></a>
-      <a class="project-item" href="project.html?id=anchorman-2" data-tags="design motion"><span>Anchorman 2</span></a>
-      <a class="project-item" href="project.html?id=barbie" data-tags="motion 3d"><span>Barbie</span></a>
-      <a class="project-item" href="project.html?id=blackbox" data-tags="motion design"><span>Black Box</span></a>
-      <a class="project-item" href="project.html?id=san-francisco-49ers" data-tags="motion design"><span>San Francisco 49ers</span></a>
-      <a class="project-item" href="project.html?id=mom" data-tags="motion design"><span>Mom</span></a>
-      <a class="project-item" href="project.html?id=teenage-mutant-ninja-turtles" data-tags="motion design"><span>Teenage Mutant Ninja Turtles</span></a>
-      <a class="project-item" href="project.html?id=ratpac" data-tags="motion design"><span>Ratpac Entertainment</span></a>
-      <a class="project-item" href="project.html?id=audi-imagination" data-tags="design motion"><span>Audi Imagination</span></a>
+      <a class="project-item" href="project.html?id=anchorman-2" data-tags="design motion 3d"><span>Anchorman 2</span></a>
+      <a class="project-item" href="project.html?id=barbie" data-tags="design 3d"><span>Barbie</span></a>
+      <a class="project-item" href="project.html?id=blackbox" data-tags="design 3d"><span>Black Box</span></a>
+      <a class="project-item" href="project.html?id=san-francisco-49ers" data-tags="design 3d"><span>San Francisco 49ers</span></a>
+      <a class="project-item" href="project.html?id=mom" data-tags="design 3d"><span>Mom</span></a>
+      <a class="project-item" href="project.html?id=teenage-mutant-ninja-turtles" data-tags="design"><span>Teenage Mutant Ninja Turtles</span></a>
+      <a class="project-item" href="project.html?id=ratpac" data-tags="design 3d"><span>Ratpac Entertainment</span></a>
+      <a class="project-item" href="project.html?id=audi-imagination" data-tags="design 3d"><span>Audi Imagination</span></a>
       <a class="project-item" href="project.html?id=walkman" data-tags="design"><span>Walkman</span></a>
       <a class="project-item" href="project.html?id=skycoin" data-tags="3d design"><span>Skywire</span></a>
       <a class="project-item" href="project.html?id=black-ops-4-anthem" data-tags="motion"><span>Black Ops 4 Anthem</span></a>
@@ -186,53 +186,6 @@
     });
   });
 </script>
-<!-- <script>
-  const projectsContainer = document.querySelector('.projects');
-  let projectItems = Array.from(document.querySelectorAll('.project-item'));
-
-  // Sort by year descending (if PROJECTS data is available)
-  if (typeof PROJECTS !== 'undefined') {
-    projectItems.sort((a, b) => {
-      const getId = (href) => href.split('id=')[1];
-      const yearA = PROJECTS[getId(a.href)]?.year || 0;
-      const yearB = PROJECTS[getId(b.href)]?.year || 0;
-      return yearB - yearA;
-    });
-
-    // Re-append sorted items to container
-    projectItems.forEach(item => projectsContainer.appendChild(item));
-
-    // Refresh reference after DOM reordering
-    projectItems = Array.from(document.querySelectorAll('.project-item'));
-  }
-
-  projectItems.forEach(item => {
-    item.addEventListener('mouseover', () => {
-      item.classList.remove('dim');
-      projectItems.forEach(other => {
-        if (other !== item && !other.classList.contains('filtered-out'))
-          other.classList.add('dim');
-      });
-    });
-  });
-  document.querySelector('.projects').addEventListener('mouseleave', () => {
-    projectItems.forEach(item => item.classList.remove('dim'));
-  });
-
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const cat = btn.dataset.category;
-      projectItems.forEach(item => {
-        item.classList.remove('filtered-out');
-        if (cat !== 'all' && !item.dataset.tags.split(' ').includes(cat))
-          item.classList.add('filtered-out');
-      });
-    });
-  });
-</script> -->
 <script src="animations.js"></script>
 </body>
 </html>
