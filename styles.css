@@ -347,6 +347,9 @@ body {
   transform: translateY(20px);
   transition: opacity 1s cubic-bezier(.12, .23, .5, 1),
               transform 1s cubic-bezier(.12, .23, .5, 1);
+  /* Added for image positioning */
+  position: relative;
+  z-index: 1;
 }
 
 .project-item::before,
@@ -381,6 +384,99 @@ body {
 .project-item.filtered-out {
   display: none;
 }
+
+/* ── New Reveal Image Logic ── */
+
+.project-reveal-img {
+  position: absolute;
+  right: 12%; 
+  bottom: 0%;
+  width: clamp(200px, 22vw, 340px);
+  height: auto;
+  pointer-events: none; 
+  z-index: 100;
+  
+  /* Initial State (Mouse Off) */
+  opacity: 0;
+  transform: translateY(100px);
+  transform-origin: bottom center;
+  
+  /* Fast Exit: 0.15s */
+  transition: opacity 0.4s cubic-bezier(.12, .23, .5, 1), transform 0.4s cubic-bezier(.12, .23, .5, 1);
+}
+
+.project-item:hover .project-reveal-img {
+  /* Hover State (Mouse Over) */
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  
+  /* Smooth Reveal: 0.35s */
+  /* transition: opacity .5s cubic-bezier(.12, .23, .5, 1), transform .5s cubic-bezier(.12, .23, .5, 1); */
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+/* Performance/Cleanliness: Hide on mobile */
+@media (max-width: 768px) {
+  .project-reveal-img {
+    display: none;
+  }
+}
+
+/* ── Index: Project list ──────────────────────
+.projects {
+  padding: 0 20px;
+  margin-bottom: 80px;
+  min-height: 40vh;
+}
+
+.project-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-family: 'PP Kyoto', sans-serif;
+  font-size: clamp(22px, 3.33vw, 30px);
+  font-weight: 500;
+  line-height: 2;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s cubic-bezier(.12, .23, .5, 1),
+              transform 1s cubic-bezier(.12, .23, .5, 1);
+}
+
+.project-item::before,
+.project-item:last-child::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: #999999;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.25s cubic-bezier(0, 0, 0.15, 1);
+}
+
+.project-item.animate-in::before,
+.project-item:last-child.animate-in::after {
+  transform: scaleX(1);
+}
+
+.project-item.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-item span {
+  transition: opacity 0.5s ease, filter 0.5s ease, color 0.6s cubic-bezier(0, 0, 0.15, 1);
+}
+
+.project-item.dim span {
+  color: #333;
+}
+
+.project-item.filtered-out {
+  display: none;
+} */
 
 /* ── Project: Intro ─────────────────────────── */
 .intro {
