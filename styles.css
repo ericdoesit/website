@@ -136,14 +136,12 @@ body {
   grid-template-columns: 1fr auto;
   align-items: center;
   padding: 0 20px;
-
   min-height: clamp(200px, 50vh, 420px);
-  /* min-height: 420px; */
 }
 
 .header__headline {
   font-family: 'PP Mori', sans-serif;
-  font-size: clamp(72px, 10vw, 140px);
+  font-size: clamp(42px, 7vw, 120px);
   font-weight: 600;
   line-height: 0.80;
   letter-spacing: -0.05em;
@@ -153,18 +151,7 @@ body {
 .hl-c1 { color: #F0C020; }
 .hl-c2 { color: #E07820; }
 .hl-c3 {
-  display: inline-block;
-  border: 4px solid #CC2820;
   color: #CC2820;
-  padding: 0.4em 0.1em 0.4em;
-  line-height: 0.8;
-  overflow: hidden;
-  position: relative;
-  width: clamp(200px, 80vw, 815px);
-}
-
-.hl-c3__slot {
-  display: block;
 }
 
 @media (max-width: 1100px) {
@@ -181,15 +168,6 @@ body {
 
 .hl-c4 { color: #1E6828; }
 
-@keyframes slotIn {
-  from { transform: translateY(-110%); }
-  to   { transform: translateY(0); }
-}
-
-@keyframes slotOut {
-  from { transform: translateY(0); }
-  to   { transform: translateY(110%); }
-}
 
 @media (max-width: 768px) {
   .header { min-height: unset; }
@@ -760,13 +738,13 @@ img.image-thumb {
   }
 
   .site-bar__email {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 
   .site-bar__email img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 
   .project-nav-btn {
@@ -860,15 +838,15 @@ img.image-thumb {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 65px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
   text-decoration: none;
   position: relative;
 }
 
 .site-bar__email img {
-  width: 65px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   transition: opacity 0.3s cubic-bezier(.12, .23, .5, 1);
 }
