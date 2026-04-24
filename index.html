@@ -19,6 +19,12 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="site-bar">
+  <a class="site-bar__email" href="mailto:ericzunkley@gmail.com" aria-label="Email Eric Zunkley">
+    <img class="email-default" src="images/email_icon.svg" alt="Email">
+    <img class="email-hover" src="images/email_icon_hover.svg" alt="Email">
+  </a>
+</div>
 <div class="page">
 
   <!-- Header -->
@@ -134,24 +140,17 @@
       return yearB - yearA;
     });
 
-    /* --- OLD PART ---
-    projectItems.forEach(item => projectsContainer.appendChild(item));
-    ------------------ */
-
-    /* --- UPDATED PART --- */
     projectItems.forEach(item => {
       const id = item.href.split('id=')[1];
-      
-      // Only inject if the image doesn't already exist
+
       if (!item.querySelector('.project-reveal-img')) {
         const img = document.createElement('img');
-        // Updated path to match your folder structure
         img.src = `images/thumbs/${id}.jpg`;
         img.className = 'project-reveal-img';
         img.loading = 'lazy';
         item.appendChild(img);
       }
-      
+
       projectsContainer.appendChild(item);
     });
 

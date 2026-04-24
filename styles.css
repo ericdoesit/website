@@ -64,7 +64,6 @@ body {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding-top: 20px;
 }
 
 /* ── Fade-in animation ──────────────────────── */
@@ -613,8 +612,8 @@ img.image-thumb {
   display: flex;
   align-items: center;
   padding-inline: 20px;
-  padding-top: clamp(24px, 4vw, 40px);
-  padding-bottom: clamp(80px, 20vh, 110px);
+  padding-top: clamp(24px, 4vw, 50px);
+  padding-bottom: clamp(80px, 20vh, 150px);
 }
 
 .footer-line {
@@ -715,44 +714,76 @@ img.image-thumb {
 .project-nav-btn {
   position: fixed;
   top: 50%;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  border: 1.5px solid var(--fg);
-  color: var(--fg);
-  background: transparent;
+  width: 65px;
+  height: 65px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-family: 'PP Mori', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1;
   cursor: pointer;
   z-index: 100;
   transform: translateY(-50%);
-  transition: background 0.3s cubic-bezier(.12, .23, .5, 1),
-              color 0.3s cubic-bezier(.12, .23, .5, 1);
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
-.project-nav-btn:hover {
-  background: var(--fg);
-  color: var(--bg);
+.project-nav-btn img {
+  width: 65px;
+  height: 65px;
+  filter: invert(1);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.2s;
+}
+
+.project-nav-btn.over-image img {
+  filter: invert(0);
+}
+
+.project-nav-btn--prev img {
+  transform: scaleX(-1);
+}
+
+.project-nav-btn--prev:hover img {
+  transform: scaleX(-1) translateX(-10px);
+}
+
+.project-nav-btn--next:hover img {
+  transform: translateX(10px);
 }
 
 .project-nav-btn--prev { left: max(16px, calc(50% - 792px)); }
 .project-nav-btn--next { right: max(16px, calc(50% - 792px)); }
 
 @media (max-width: 768px) {
+  .site-bar {
+    gap: 12px;
+  }
+
+  .site-bar__email {
+    width: 50px;
+    height: 50px;
+  }
+
+  .site-bar__email img {
+    width: 50px;
+    height: 50px;
+  }
+
   .project-nav-btn {
     top: auto !important;
     bottom: 24px;
     transform: none !important;
-    background: rgba(0, 0, 0, 0.25);
+    width: 45px;
+    height: 45px;
   }
-  .project-nav-btn--prev { left: calc(50% - 58px); }
-  .project-nav-btn--next { left: calc(50% + 6px); right: auto; }
+
+  .project-nav-btn img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .project-nav-btn--prev { left: calc(50% - 55px); }
+  .project-nav-btn--next { left: calc(50% + 5px); right: auto; }
   .image-grid { gap: 10px; }
 }
 
@@ -811,4 +842,53 @@ img.image-thumb {
 .lightbox-close svg {
   width: 28px;
   height: 28px;
+}
+
+/* ── Email icon bars ────────────────────────── */
+.site-bar {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+}
+
+.site-bar__email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  text-decoration: none;
+  position: relative;
+}
+
+.site-bar__email img {
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  transition: opacity 0.3s cubic-bezier(.12, .23, .5, 1);
+}
+
+.site-bar__email .email-default {
+  filter: invert(1);
+}
+
+.site-bar__email .email-default {
+  opacity: 1;
+}
+
+.site-bar__email .email-hover {
+  opacity: 0;
+}
+
+.site-bar__email:hover .email-default {
+  opacity: 0;
+}
+
+.site-bar__email:hover .email-hover {
+  opacity: 1;
 }
