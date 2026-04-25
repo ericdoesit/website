@@ -42,6 +42,7 @@
   --red:    #ad2c1c;
   --blue:   #1d5091;
   --green:  #1d6f31;
+  --yellow: #F0C020;
   --orange: #d35b2c;
   --bg: #151515;
   --fg: #F1F1F1;
@@ -130,14 +131,16 @@ body {
   font-family: 'PP Mori', sans-serif;
   font-size: clamp(42px, 7vw, 120px);
   font-weight: 600;
-  line-height: 0.80;
+  line-height: 0.90;
   letter-spacing: -0.05em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
-.hl-c1 { color: #1d5091; }
-.hl-c2 { color: #ad2c1c; }
-.hl-c3 { color: #F0C020; }
+
+.hl-c1 { color: var(--red); }
+.hl-c2 { color: var(--blue); }
+.hl-c3 { color: var(--yellow); }
+.hl-c4 { color: var(--green); }
 
 @media (max-width: 1024px) {
   .header__headline { font-size: clamp(42px, 10vw, 120px); }
