@@ -122,33 +122,5 @@
 <script src="project.js"></script>
 <script src="animations.js"></script>
 <script src="contact.js"></script>
-<script>
-  const navPrev = document.getElementById('nav-prev');
-  const navNext = document.getElementById('nav-next');
-
-  function checkNavOverImage() {
-    [navPrev, navNext].forEach(btn => {
-      const btnRect = btn.getBoundingClientRect();
-      const btnCenterX = btnRect.left + btnRect.width / 2;
-      const btnCenterY = btnRect.top + btnRect.height / 2;
-
-      btn.style.visibility = 'hidden';
-      const el = document.elementFromPoint(btnCenterX, btnCenterY);
-      btn.style.visibility = '';
-
-      const isBackground = !el
-        || el.tagName === 'BODY'
-        || el.tagName === 'HTML'
-        || el.classList.contains('page')
-        || el.classList.contains('site-bar');
-
-      btn.classList.toggle('over-image', !isBackground);
-    });
-  }
-
-  window.addEventListener('scroll', checkNavOverImage);
-  window.addEventListener('resize', checkNavOverImage);
-  checkNavOverImage();
-</script>
 </body>
 </html>
