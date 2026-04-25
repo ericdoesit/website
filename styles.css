@@ -135,10 +135,9 @@ body {
   text-transform: uppercase;
 }
 
-.hl-c1 { color: #F0C020; }
-.hl-c2 { color: #E07820; }
-.hl-c3 { color: #CC2820; }
-.hl-c4 { color: #1E6828; }
+.hl-c1 { color: #1d5091; }
+.hl-c2 { color: #ad2c1c; }
+.hl-c3 { color: #F0C020; }
 
 @media (max-width: 1024px) {
   .header__headline { font-size: clamp(42px, 10vw, 120px); }
