@@ -110,10 +110,6 @@ var PROJECTS = {
       'images/afterearth/frame-2.jpg',
       'images/afterearth/frame-3.jpg',
       'images/afterearth/frame-4.jpg',
-      'images/afterearth/frame-5.jpg',
-      'images/afterearth/frame-6.jpg',
-      'images/afterearth/frame-7.jpg',
-      'images/afterearth/frame-8.jpg',
     ],
     videos: [
       { id: '98816848', ratio: '16/9' },
