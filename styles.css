@@ -512,12 +512,18 @@ img.image-thumb {
 }
 
 .image-note a {
-  color: var(--fg);
+  color: #999999;
   text-decoration: none;
 }
 
 .image-note a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .image-note a {
+    text-decoration: underline;
+  }
 }
 
 /* ── Project: Movie section ─────────────────── */
@@ -624,12 +630,33 @@ img.image-thumb {
 }
 
 .credits-block a {
-  color: inherit;
-  text-decoration: underline;
+  color: #999999;
+  text-decoration: none;
 }
 
 .credits-block a:hover {
-  color: var(--fg);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .credits-block a {
+    text-decoration: underline;
+  }
+}
+
+.section-text a {
+  color: #999999;
+  text-decoration: none;
+}
+
+.section-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .section-text a {
+    text-decoration: underline;
+  }
 }
 
 .section-text {
