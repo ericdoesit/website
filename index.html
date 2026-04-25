@@ -230,5 +230,12 @@
   });
 </script>
 <script src="animations.js"></script>
+<script>
+  document.querySelectorAll('video[autoplay]').forEach(video => {
+    video.play().catch(() => {
+      // Autoplay failed, video will show poster instead
+    });
+  });
+</script>
 </body>
 </html>
