@@ -60,9 +60,11 @@
   });
 })();
 
-document.querySelectorAll('video[autoplay]').forEach(video => {
-  video.play().catch(() => {
-    // Autoplay failed, video will show poster instead
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('video[autoplay]').forEach(video => {
+    video.play().catch(() => {
+      video.addEventListener('canplay', () => video.play().catch(() => {}), { once: true });
+    });
   });
 });
 
