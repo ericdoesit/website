@@ -684,6 +684,7 @@ img.image-thumb {
 .project-nav-btn img {
   width: 65px;
   height: 65px;
+  filter: invert(1);
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
