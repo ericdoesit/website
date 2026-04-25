@@ -127,27 +127,22 @@
   const navNext = document.getElementById('nav-next');
 
   function checkNavOverImage() {
-    const images = document.querySelectorAll('.image-thumb, .feature-image__video, video');
-
     [navPrev, navNext].forEach(btn => {
       const btnRect = btn.getBoundingClientRect();
       const btnCenterX = btnRect.left + btnRect.width / 2;
       const btnCenterY = btnRect.top + btnRect.height / 2;
 
-      let overImage = false;
-      images.forEach(img => {
-        const imgRect = img.getBoundingClientRect();
-        if (btnCenterX >= imgRect.left && btnCenterX <= imgRect.right &&
-            btnCenterY >= imgRect.top && btnCenterY <= imgRect.bottom) {
-          overImage = true;
-        }
-      });
+      btn.style.visibility = 'hidden';
+      const el = document.elementFromPoint(btnCenterX, btnCenterY);
+      btn.style.visibility = '';
 
-      if (overImage) {
-        btn.classList.add('over-image');
-      } else {
-        btn.classList.remove('over-image');
-      }
+      const isBackground = !el
+        || el.tagName === 'BODY'
+        || el.tagName === 'HTML'
+        || el.classList.contains('page')
+        || el.classList.contains('site-bar');
+
+      btn.classList.toggle('over-image', !isBackground);
     });
   }
 
