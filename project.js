@@ -40,7 +40,7 @@ if (p.images && p.images.length) {
     grid.classList.add('image-grid--capped');
   }
   grid.innerHTML = p.images
-    .map(src => `<img class="image-thumb" src="${src}" loading="eager" alt="">`)
+    .map((src, idx) => `<img class="image-thumb" src="${src}" loading="eager" alt="${p.title.replace('\n', ' ')} - image ${idx + 1}">`)
     .join('');
 } else {
   document.getElementById('image-grid').style.display = 'none';
@@ -84,7 +84,7 @@ function renderBlock(block) {
       return `<p class="section-text fade-in">${block.body}</p>`;
     case 'images': {
       const cols = block.columns || 2;
-      return `<div class="image-grid image-grid-${cols} fade-in">${block.items.map(src=>`<img class="image-thumb" src="${src}" loading="lazy" alt="">`).join('')}</div>`;
+      return `<div class="image-grid image-grid-${cols} fade-in">${block.items.map((src,idx)=>`<img class="image-thumb" src="${src}" loading="lazy" alt="${p.title.replace('\n', ' ')} - section image ${idx + 1}">`).join('')}</div>`;
     }
     case 'quote':
       return `<div class="quote-block fade-in"><p>${block.text}</p></div>`;

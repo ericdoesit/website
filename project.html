@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Creative design and motion work by Eric Zunkley for broadcast, film, and digital platforms.">
+  <meta property="og:title" content="Eric Zunkley — Designer & Motion Artist">
+  <meta property="og:description" content="Creative design and motion work for major brands and film studios.">
+  <meta property="og:type" content="website">
   <title>Project</title>
   <link rel="icon" type="image/png" href="images/icon_star.png">
   <link rel="preload" href="fonts/PPKyoto-Medium.otf" as="font" type="font/otf" crossorigin>
@@ -16,14 +20,53 @@
     if (!p) location.href = 'index.html';
     document.documentElement.style.setProperty('--project-color', p.color);
     document.title = 'Eric Zunkley — ' + p.title.replace('\n', ' ');
+    document.querySelector('meta[name="description"]').setAttribute('content', p.shortDescription || 'Creative work by Eric Zunkley');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "creator": {
+      "@type": "Person",
+      "name": "Eric Zunkley",
+      "url": "https://ericzunkley.com"
+    },
+    "description": "Creative design and motion work"
+  }
   </script>
 </head>
 <body>
 <div class="site-bar">
-  <a class="site-bar__email" href="mailto:ericzunkley@gmail.com" aria-label="Email Eric Zunkley">
+  <button class="site-bar__email" id="email-btn" aria-label="Email Eric Zunkley">
     <img class="email-default" src="images/email_icon.svg" alt="Email">
     <img class="email-hover" src="images/email_icon_hover.svg" alt="Email">
-  </a>
+  </button>
+</div>
+
+<!-- Contact Modal -->
+<div id="contact-modal" class="contact-modal">
+  <div class="contact-modal__overlay"></div>
+  <div class="contact-modal__content">
+    <button class="contact-modal__close" id="close-modal" aria-label="Close">×</button>
+    <h2 class="contact-modal__title">Get in touch</h2>
+    <form id="contact-form" class="contact-form">
+      <input type="hidden" name="_captcha" value="false">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Your email" required>
+      </div>
+      <div class="form-group">
+        <input type="text" name="subject" placeholder="Subject" required>
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="contact-form__submit">Send</button>
+      <p class="contact-form__status" id="form-status"></p>
+    </form>
+  </div>
 </div>
 <a id="nav-prev" class="project-nav-btn project-nav-btn--prev">
   <img src="images/arrow.svg" alt="Previous project">
@@ -78,6 +121,7 @@
 </div>
 <script src="project.js"></script>
 <script src="animations.js"></script>
+<script src="contact.js"></script>
 <script>
   const navPrev = document.getElementById('nav-prev');
   const navNext = document.getElementById('nav-next');
