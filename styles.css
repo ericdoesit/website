@@ -46,7 +46,6 @@
   --orange: #d35b2c;
   --bg: #151515;
   --fg: #F1F1F1;
-  --project-color: #ad2c1c;
 }
 
 /* ── Base ───────────────────────────────────── */
@@ -434,7 +433,6 @@ body {
 .image-grid-5 { grid-template-columns: repeat(5, 1fr); }
 
 .image-thumb {
-  background: var(--project-color);
   border-radius: 12px;
   aspect-ratio: 16 / 9;
   width: 100%;
@@ -525,7 +523,6 @@ img.image-thumb {
 }
 
 .movie-placeholder {
-  background: var(--project-color);
   border-radius: 12px;
   aspect-ratio: 16 / 9;
   width: 100%;

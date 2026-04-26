@@ -18,7 +18,6 @@
     const id = new URLSearchParams(location.search).get('id') || 'a-little-flexibility';
     const p = window.PROJECTS[id];
     if (!p) location.href = 'index.html';
-    document.documentElement.style.setProperty('--project-color', p.color);
     document.title = 'Eric Zunkley — ' + p.title.replace('\n', ' ');
     document.querySelector('meta[name="description"]').setAttribute('content', p.shortDescription || 'Creative work by Eric Zunkley');
   </script>

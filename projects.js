@@ -27,10 +27,10 @@ var PROJECTS = {
       },
       "shortDescription": "Performance marketing concepts for Ethos life insurance — static design and motion.",
       "images": [
-          "images/ethos/frame-1.jpg",
-          "images/ethos/frame-2.jpg",
-          "images/ethos/frame-3.jpg",
-          "images/ethos/frame-4.jpg"
+          "images/ethos/frame-1.webp",
+          "images/ethos/frame-2.webp",
+          "images/ethos/frame-3.webp",
+          "images/ethos/frame-4.webp"
       ],
       "videos": [
           {
@@ -115,21 +115,21 @@ var PROJECTS = {
                       "type": "images",
                       "columns": 5,
                       "items": [
-                          "images/noom/1- Thm_Other Con_StoplightWithFoodMotion Style_Functional Form_Video Vis_RibsSalad Copy_NoomIsntAbout (00153).jpg",
-                          "images/noom/1- Thm_Other Con_ThisOrThat Style_Analytical Form_Video Vis_ChipsPopcorn Copy_ChangingTheWay (00056).jpg",
-                          "images/noom/1_CA-HQ_CT-4x5Vid_AI-NA_IT-Vid15s_IM-People-WomanExercise_LP-Exsf01_Category-Branded_VP-Flexibility_MT-Convenience of Noom_String-WeightEC_PollCopy-NA_TextOverlay-WithNoomExerciseLooks_CTA-GetThePlanThatGetsYou_Freeform-HardExercise-2 (00080).jpg",
-                          "images/noom/1_CA-HQ_CT-4x5Vid_AI-NA_IT-Vid30s_IM-slot-machine_LP-Exsf01_Category-Branded_VP-Psychology (Baseline)_MT-Broad_String-CompassV4NoTest_PollCopy-na_TextOverlay-ChangingTheWay_CTA-na_Freeform-na (00050).jpg",
-                          "images/noom/1_CA-HQ_CT-Video_AI-NA_IT-Vid30s_IM-EducationalTimeline_LP-Exsf01_Category-Branded_VP-Other_MT-Other_String-MedProductStringV1_PollCopy-NA_TextOverlay-WhyIsEveryoneTalking_CTA-SeeIfYouQualify_Freeform-SET1 (00070).jpg",
-                          "images/noom/1_Thm_BeforeAfter_Style_Other_Form_Video_Vis_Food_Copy_HealthyYou- (00203).jpg",
-                          "images/noom/1_Thm_NoomIsnt_Style_Other_Form_Video_Vis_Hand_Copy_StartToday (00071).jpg",
-                          "images/noom/1_Thm_Other Con_JoyfulEating Style_Other Form_Video Vis_BurgerVideo Copy_YouCanHaveFriesWithThat (00078).jpg",
-                          "images/noom/1_Thm_Other Con_ProblemSolutionIteration Style_Other Form_Video Vis_V1 Copy_WeightBoomerangsBack (00094).jpg",
-                          "images/noom/1_Thm_Pandemic_ConFogEating_Style_Other_Form_Video_Vis_It (00062).jpg",
-                          "images/noom/psychology.jpg",
-                          "images/noom/1_Thm_WeightGraph Con_WeightGraph Style_Other Form_Video Vis_WeightGraph Copy_NotFadDieting (00244).jpg",
-                          "images/noom/2022_Q2_YT_UK_FogEating- 01 4x5 Final (00075).jpg",
-                          "images/noom/4_CA-HQ_CT-1x1Vid_AI-NA_IT-Vid-10s_IM-food-egg_LP-Exsf01_Category-Branded_VP-Sustainability_MT-LongTerm_String-CompassV4_PollCopy-na_TextOverlay-WeightLossThatSticks_CTA-TakeTheQuiz_Freeform-na (00118).jpg",
-                          "images/noom/Waffle_01 (00090).jpg"
+                          "images/noom/1- Thm_Other Con_StoplightWithFoodMotion Style_Functional Form_Video Vis_RibsSalad Copy_NoomIsntAbout (00153).webp",
+                          "images/noom/1- Thm_Other Con_ThisOrThat Style_Analytical Form_Video Vis_ChipsPopcorn Copy_ChangingTheWay (00056).webp",
+                          "images/noom/1_CA-HQ_CT-4x5Vid_AI-NA_IT-Vid15s_IM-People-WomanExercise_LP-Exsf01_Category-Branded_VP-Flexibility_MT-Convenience of Noom_String-WeightEC_PollCopy-NA_TextOverlay-WithNoomExerciseLooks_CTA-GetThePlanThatGetsYou_Freeform-HardExercise-2 (00080).webp",
+                          "images/noom/1_CA-HQ_CT-4x5Vid_AI-NA_IT-Vid30s_IM-slot-machine_LP-Exsf01_Category-Branded_VP-Psychology (Baseline)_MT-Broad_String-CompassV4NoTest_PollCopy-na_TextOverlay-ChangingTheWay_CTA-na_Freeform-na (00050).webp",
+                          "images/noom/1_CA-HQ_CT-Video_AI-NA_IT-Vid30s_IM-EducationalTimeline_LP-Exsf01_Category-Branded_VP-Other_MT-Other_String-MedProductStringV1_PollCopy-NA_TextOverlay-WhyIsEveryoneTalking_CTA-SeeIfYouQualify_Freeform-SET1 (00070).webp",
+                          "images/noom/1_Thm_BeforeAfter_Style_Other_Form_Video_Vis_Food_Copy_HealthyYou- (00203).webp",
+                          "images/noom/1_Thm_NoomIsnt_Style_Other_Form_Video_Vis_Hand_Copy_StartToday (00071).webp",
+                          "images/noom/1_Thm_Other Con_JoyfulEating Style_Other Form_Video Vis_BurgerVideo Copy_YouCanHaveFriesWithThat (00078).webp",
+                          "images/noom/1_Thm_Other Con_ProblemSolutionIteration Style_Other Form_Video Vis_V1 Copy_WeightBoomerangsBack (00094).webp",
+                          "images/noom/1_Thm_Pandemic_ConFogEating_Style_Other_Form_Video_Vis_It (00062).webp",
+                          "images/noom/psychology.webp",
+                          "images/noom/1_Thm_WeightGraph Con_WeightGraph Style_Other Form_Video Vis_WeightGraph Copy_NotFadDieting (00244).webp",
+                          "images/noom/2022_Q2_YT_UK_FogEating- 01 4x5 Final (00075).webp",
+                          "images/noom/4_CA-HQ_CT-1x1Vid_AI-NA_IT-Vid-10s_IM-food-egg_LP-Exsf01_Category-Branded_VP-Sustainability_MT-LongTerm_String-CompassV4_PollCopy-na_TextOverlay-WeightLossThatSticks_CTA-TakeTheQuiz_Freeform-na (00118).webp",
+                          "images/noom/Waffle_01 (00090).webp"
                       ]
                   }
               ]
@@ -206,7 +206,7 @@ var PROJECTS = {
                   {
                       "type": "images",
                       "items": [
-                          "images/walkman/frame-1.jpg"
+                          "images/walkman/frame-1.webp"
                       ],
                       "columns": 1
                   }
@@ -218,10 +218,10 @@ var PROJECTS = {
                   {
                       "type": "images",
                       "items": [
-                          "images/walkman/frame-2.jpg",
-                          "images/walkman/frame-3.jpg",
-                          "images/walkman/frame-4.jpg",
-                          "images/walkman/frame-5.jpg"
+                          "images/walkman/frame-2.webp",
+                          "images/walkman/frame-3.webp",
+                          "images/walkman/frame-4.webp",
+                          "images/walkman/frame-5.webp"
                       ],
                       "columns": 2
                   }
@@ -233,8 +233,8 @@ var PROJECTS = {
                   {
                       "type": "images",
                       "items": [
-                          "images/walkman/frame-6.jpg",
-                          "images/walkman/frame-7.jpg"
+                          "images/walkman/frame-6.webp",
+                          "images/walkman/frame-7.webp"
                       ],
                       "columns": 2
                   }
@@ -315,20 +315,20 @@ var PROJECTS = {
                       "type": "images",
                       "columns": 4,
                       "items": [
-                          "images/taco-bell-organic-social/EverydayDinner_9x16_sm2.jpg",
-                          "images/taco-bell-organic-social/Friendsgiving_9x16_sm2.jpg",
-                          "images/taco-bell-organic-social/GameDay_9x16_sm2.jpg",
-                          "images/taco-bell-organic-social/Holidays_9x16_sm2.jpg"
+                          "images/taco-bell-organic-social/EverydayDinner_9x16_sm2.webp",
+                          "images/taco-bell-organic-social/Friendsgiving_9x16_sm2.webp",
+                          "images/taco-bell-organic-social/GameDay_9x16_sm2.webp",
+                          "images/taco-bell-organic-social/Holidays_9x16_sm2.webp"
                       ]
                   },
                   {
                       "type": "images",
                       "columns": 2,
                       "items": [
-                          "images/taco-bell-organic-social/frame-1.jpg",
-                          "images/taco-bell-organic-social/frame-2.jpg",
-                          "images/taco-bell-organic-social/frame-3.jpg",
-                          "images/taco-bell-organic-social/frame-4.jpg"
+                          "images/taco-bell-organic-social/frame-1.webp",
+                          "images/taco-bell-organic-social/frame-2.webp",
+                          "images/taco-bell-organic-social/frame-3.webp",
+                          "images/taco-bell-organic-social/frame-4.webp"
                       ]
                   },
                   {
@@ -375,10 +375,10 @@ var PROJECTS = {
                       "type": "images",
                       "columns": 2,
                       "items": [
-                          "images/taco-bell-organic-social/frame-5.jpg",
-                          "images/taco-bell-organic-social/frame-7.jpg",
-                          "images/taco-bell-organic-social/frame-8.jpg",
-                          "images/taco-bell-organic-social/frame-9.jpg"
+                          "images/taco-bell-organic-social/frame-5.webp",
+                          "images/taco-bell-organic-social/frame-7.webp",
+                          "images/taco-bell-organic-social/frame-8.webp",
+                          "images/taco-bell-organic-social/frame-9.webp"
                       ]
                   },
                   {
@@ -426,10 +426,10 @@ var PROJECTS = {
                       "type": "images",
                       "columns": 2,
                       "items": [
-                          "images/taco-bell-organic-social/frame-11.jpg",
-                          "images/taco-bell-organic-social/frame-13.jpg",
-                          "images/taco-bell-organic-social/frame-14.jpg",
-                          "images/taco-bell-organic-social/frame-15.jpg"
+                          "images/taco-bell-organic-social/frame-11.webp",
+                          "images/taco-bell-organic-social/frame-13.webp",
+                          "images/taco-bell-organic-social/frame-14.webp",
+                          "images/taco-bell-organic-social/frame-15.webp"
                       ]
                   }
               ]
@@ -450,12 +450,12 @@ var PROJECTS = {
       "imageColumns": 3,
       "imageMaxHeight": 600,
       "images": [
-          "images/beats-buddy/frame-1.jpg",
-          "images/beats-buddy/frame-2.jpg",
-          "images/beats-buddy/frame-3.jpg",
-          "images/beats-buddy/frame-4.jpg",
-          "images/beats-buddy/frame-5.jpg",
-          "images/beats-buddy/frame-6.jpg"
+          "images/beats-buddy/frame-1.webp",
+          "images/beats-buddy/frame-2.webp",
+          "images/beats-buddy/frame-3.webp",
+          "images/beats-buddy/frame-4.webp",
+          "images/beats-buddy/frame-5.webp",
+          "images/beats-buddy/frame-6.webp"
       ],
       "videoMaxHeight": 960,
       "videos": [
@@ -497,8 +497,8 @@ var PROJECTS = {
       "solution": "Art direction by Michael Malowanczyk. 3D design and rendering by Eric Zunkley and Michael Malowanczyk — building abstract network visualizations that communicated scale and connectivity.",
       "logic": "Technology visualization has to balance accuracy with accessibility. The work needed to feel like infrastructure, not decoration.",
       "images": [
-          "images/skycoin/frame-1.jpg",
-          "images/skycoin/frame-2.jpg"
+          "images/skycoin/frame-1.webp",
+          "images/skycoin/frame-2.webp"
       ]
   },
   'black-ops-4-anthem': {
@@ -555,10 +555,10 @@ var PROJECTS = {
       "solution": "Designed show packages, broadcast elements, in-studio visuals, and promotional spots over two years. Key work includes the Inside Access opening sequence built in Cinema 4D.",
       "logic": "Consistent motion language and type system across teams let editors pull from a shared toolkit without losing team-specific identity.",
       "images": [
-          "images/spectrum-sportsnet/frame-1.jpg",
-          "images/spectrum-sportsnet/frame-2.jpg",
-          "images/spectrum-sportsnet/frame-3.jpg",
-          "images/spectrum-sportsnet/frame-4.jpg"
+          "images/spectrum-sportsnet/frame-1.webp",
+          "images/spectrum-sportsnet/frame-2.webp",
+          "images/spectrum-sportsnet/frame-3.webp",
+          "images/spectrum-sportsnet/frame-4.webp"
       ],
       "videos": [
           {
@@ -588,8 +588,8 @@ var PROJECTS = {
       "solution": "Designed a bold, kinetic look pulling from baseball's graphic tradition — clean lines, sharp cuts, and a color palette anchored in Dodger blue.",
       "logic": "The segment needed to feel distinct within the Spectrum Sportsnet system while clearly belonging to it. Strong typography and motion cues carry the brand.",
       "images": [
-          "images/high-and-tight/frame-1.jpg",
-          "images/high-and-tight/frame-2.jpg"
+          "images/high-and-tight/frame-1.webp",
+          "images/high-and-tight/frame-2.webp"
       ],
       "videos": [
           {
@@ -612,7 +612,7 @@ var PROJECTS = {
       "logic": "Spectrum Sportsnet needed segments that could stand on their own tonally. Hometown Call leans warmer and more nostalgic than the harder-edged game coverage.",
       "imageColumns": 1,
       "images": [
-          "images/hometowncall/frame-1.jpg"
+          "images/hometowncall/frame-1.webp"
       ],
       "videos": [
           {
@@ -661,7 +661,7 @@ var PROJECTS = {
                   {
                       "type": "images",
                       "items": [
-                          "images/beats-by-dre-pop/frame-3.jpg"
+                          "images/beats-by-dre-pop/frame-3.webp"
                       ],
                       "columns": 1
                   },
@@ -677,8 +677,8 @@ var PROJECTS = {
                   {
                       "type": "images",
                       "items": [
-                          "images/beats-by-dre-pop/frame-1.jpg",
-                          "images/beats-by-dre-pop/frame-2.jpg"
+                          "images/beats-by-dre-pop/frame-1.webp",
+                          "images/beats-by-dre-pop/frame-2.webp"
                       ],
                       "columns": 2
                   },
@@ -694,8 +694,8 @@ var PROJECTS = {
                   {
                       "type": "images",
                       "items": [
-                          "images/beats-by-dre-pop/frame-4.jpg",
-                          "images/beats-by-dre-pop/frame-5.jpg"
+                          "images/beats-by-dre-pop/frame-4.webp",
+                          "images/beats-by-dre-pop/frame-5.webp"
                       ],
                       "columns": 2
                   },
@@ -721,10 +721,10 @@ var PROJECTS = {
       "solution": "Created an organic motion system using particle simulations and environmental textures — echoing the film's themes of nature and survival without replicating the film's footage.",
       "logic": "End titles are often treated as an afterthought. The goal was to create something that felt like a natural extension of the film rather than a corporate card.",
       "images": [
-          "images/afterearth/frame-1.jpg",
-          "images/afterearth/frame-2.jpg",
-          "images/afterearth/frame-3.jpg",
-          "images/afterearth/frame-4.jpg"
+          "images/afterearth/frame-1.webp",
+          "images/afterearth/frame-2.webp",
+          "images/afterearth/frame-3.webp",
+          "images/afterearth/frame-4.webp"
       ],
       "videos": [
           {
@@ -746,20 +746,20 @@ var PROJECTS = {
       "solution": "Developed 15 style frames using a posterized, graphic treatment in Photoshop, Illustrator, C4D, and After Effects — capturing the satirical tone through bold typography and period-appropriate design.",
       "logic": "The concept was never produced, but the process of translating a film's comedic voice into a visual system is the same whether it ships or not.",
       "images": [
-          "images/anchorman-2/frame-1.jpg",
-          "images/anchorman-2/frame-2.jpg",
-          "images/anchorman-2/frame-3.jpg",
-          "images/anchorman-2/frame-4.jpg",
-          "images/anchorman-2/frame-5.jpg",
-          "images/anchorman-2/frame-6.jpg",
-          "images/anchorman-2/frame-7.jpg",
-          "images/anchorman-2/frame-8.jpg",
-          "images/anchorman-2/frame-9.jpg",
-          "images/anchorman-2/frame-10.jpg",
-          "images/anchorman-2/frame-11.jpg",
-          "images/anchorman-2/frame-12.jpg",
-          "images/anchorman-2/frame-13.jpg",
-          "images/anchorman-2/frame-14.jpg"
+          "images/anchorman-2/frame-1.webp",
+          "images/anchorman-2/frame-2.webp",
+          "images/anchorman-2/frame-3.webp",
+          "images/anchorman-2/frame-4.webp",
+          "images/anchorman-2/frame-5.webp",
+          "images/anchorman-2/frame-6.webp",
+          "images/anchorman-2/frame-7.webp",
+          "images/anchorman-2/frame-8.webp",
+          "images/anchorman-2/frame-9.webp",
+          "images/anchorman-2/frame-10.webp",
+          "images/anchorman-2/frame-11.webp",
+          "images/anchorman-2/frame-12.webp",
+          "images/anchorman-2/frame-13.webp",
+          "images/anchorman-2/frame-14.webp"
       ]
   },
   'barbie': {
@@ -776,8 +776,8 @@ var PROJECTS = {
       "solution": "At Picture Mill, built C4D animation, lighting, and rendering to achieve the tactile, hand-crafted feel. Compositing by Nelson Yu.",
       "logic": "The challenge with photo-realistic CG is making it feel intentionally handmade — the stop-motion reference gave the project a warmth that pure CG rarely achieves.",
       "images": [
-          "images/barbie/frame-1.jpg",
-          "images/barbie/frame-2.jpg"
+          "images/barbie/frame-1.webp",
+          "images/barbie/frame-2.webp"
       ],
       "videos": [
           {
@@ -799,12 +799,12 @@ var PROJECTS = {
       "solution": "Used reflective faceted panels as the core design motif, creating a visual metaphor for fragmented identity. Pitch was not produced. Studio: Picture Mill.",
       "logic": "Rejected pitches are still full design problems. The reflective panel system solved the brief — the production decision had nothing to do with the concept.",
       "images": [
-          "images/blackbox/frame-1.jpg",
-          "images/blackbox/frame-2.jpg",
-          "images/blackbox/frame-3.jpg",
-          "images/blackbox/frame-5.jpg",
-          "images/blackbox/frame-6.jpg",
-          "images/blackbox/frame-7.jpg"
+          "images/blackbox/frame-1.webp",
+          "images/blackbox/frame-2.webp",
+          "images/blackbox/frame-3.webp",
+          "images/blackbox/frame-5.webp",
+          "images/blackbox/frame-6.webp",
+          "images/blackbox/frame-7.webp"
       ]
   },
   'san-francisco-49ers': {
@@ -821,7 +821,7 @@ var PROJECTS = {
       "logic": "Proof-of-concept work is about demonstrating possibility, not delivering a product. The goal is to make a client see something they didn't know they wanted.",
       "imageColumns": 1,
       "images": [
-          "images/san-francisco-49ers/frame-1.jpg"
+          "images/san-francisco-49ers/frame-1.webp"
       ]
   },
   'mom': {
@@ -837,16 +837,16 @@ var PROJECTS = {
       "solution": "Wall explored found objects and domestic textures arranged as typographic elements. Fall used kinetic dropping motion to convey both comedy and consequence. Developed at Picture Mill.",
       "logic": "Comedy title sequences have to establish tone without undercutting the show's emotional honesty. Both concepts worked in opposite directions — one grounded, one kinetic.",
       "images": [
-          "images/mom/frame-1.jpg",
-          "images/mom/frame-3.jpg",
-          "images/mom/frame-4.jpg",
-          "images/mom/frame-5.jpg",
-          "images/mom/frame-6.jpg",
-          "images/mom/frame-7.jpg",
-          "images/mom/frame-8.jpg",
-          "images/mom/frame-9.jpg",
-          "images/mom/frame-10.jpg",
-          "images/mom/frame-11.jpg"
+          "images/mom/frame-1.webp",
+          "images/mom/frame-3.webp",
+          "images/mom/frame-4.webp",
+          "images/mom/frame-5.webp",
+          "images/mom/frame-6.webp",
+          "images/mom/frame-7.webp",
+          "images/mom/frame-8.webp",
+          "images/mom/frame-9.webp",
+          "images/mom/frame-10.webp",
+          "images/mom/frame-11.webp"
       ]
   },
   'teenage-mutant-ninja-turtles': {
@@ -861,24 +861,24 @@ var PROJECTS = {
       "solution": "Developed 18 style frames building a graphic, high-contrast visual system. Designed and animated at Picture Mill.",
       "logic": "Franchise IP comes with deep audience expectations. The design had to honor the source material while pushing it somewhere new — familiar but not nostalgic.",
       "images": [
-          "images/teenage-mutant-ninja-turtles/frame-1.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-2.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-3.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-4.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-5.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-6.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-7.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-8.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-9.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-10.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-11.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-12.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-13.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-14.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-15.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-16.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-17.jpg",
-          "images/teenage-mutant-ninja-turtles/frame-18.jpg"
+          "images/teenage-mutant-ninja-turtles/frame-1.webp",
+          "images/teenage-mutant-ninja-turtles/frame-2.webp",
+          "images/teenage-mutant-ninja-turtles/frame-3.webp",
+          "images/teenage-mutant-ninja-turtles/frame-4.webp",
+          "images/teenage-mutant-ninja-turtles/frame-5.webp",
+          "images/teenage-mutant-ninja-turtles/frame-6.webp",
+          "images/teenage-mutant-ninja-turtles/frame-7.webp",
+          "images/teenage-mutant-ninja-turtles/frame-8.webp",
+          "images/teenage-mutant-ninja-turtles/frame-9.webp",
+          "images/teenage-mutant-ninja-turtles/frame-10.webp",
+          "images/teenage-mutant-ninja-turtles/frame-11.webp",
+          "images/teenage-mutant-ninja-turtles/frame-12.webp",
+          "images/teenage-mutant-ninja-turtles/frame-13.webp",
+          "images/teenage-mutant-ninja-turtles/frame-14.webp",
+          "images/teenage-mutant-ninja-turtles/frame-15.webp",
+          "images/teenage-mutant-ninja-turtles/frame-16.webp",
+          "images/teenage-mutant-ninja-turtles/frame-17.webp",
+          "images/teenage-mutant-ninja-turtles/frame-18.webp"
       ]
   },
   'ratpac': {
@@ -900,10 +900,10 @@ var PROJECTS = {
                   {
                       "type": "images",
                       "items": [
-                          "images/ratpac/frame-1.jpg",
-                          "images/ratpac/frame-3.jpg",
-                          "images/ratpac/frame-4.jpg",
-                          "images/ratpac/frame-5.jpg"
+                          "images/ratpac/frame-1.webp",
+                          "images/ratpac/frame-3.webp",
+                          "images/ratpac/frame-4.webp",
+                          "images/ratpac/frame-5.webp"
                       ],
                       "columns": 2
                   }
@@ -915,12 +915,12 @@ var PROJECTS = {
                   {
                       "type": "images",
                       "items": [
-                          "images/ratpac/frame-6.jpg",
-                          "images/ratpac/frame-7.jpg",
-                          "images/ratpac/frame-8.jpg",
-                          "images/ratpac/frame-9.jpg",
-                          "images/ratpac/frame-10.jpg",
-                          "images/ratpac/frame-11.jpg"
+                          "images/ratpac/frame-6.webp",
+                          "images/ratpac/frame-7.webp",
+                          "images/ratpac/frame-8.webp",
+                          "images/ratpac/frame-9.webp",
+                          "images/ratpac/frame-10.webp",
+                          "images/ratpac/frame-11.webp"
                       ],
                       "columns": 2
                   }
@@ -932,10 +932,10 @@ var PROJECTS = {
                   {
                       "type": "images",
                       "items": [
-                          "images/ratpac/frame-13.jpg",
-                          "images/ratpac/frame-14.jpg",
-                          "images/ratpac/frame-15.jpg",
-                          "images/ratpac/frame-16.jpg"
+                          "images/ratpac/frame-13.webp",
+                          "images/ratpac/frame-14.webp",
+                          "images/ratpac/frame-15.webp",
+                          "images/ratpac/frame-16.webp"
                       ],
                       "columns": 2
                   }
@@ -956,8 +956,8 @@ var PROJECTS = {
       "solution": "Developed organic and mechanical imagery that blended the natural world with precision engineering. The designer's horse artwork was selected for the final version. Directed by Vanessa Marzaroli.",
       "logic": "Automotive design inspiration lives at the intersection of nature and engineering. The brief asked for that tension to be visualized — the horse became the answer.",
       "images": [
-          "images/audi-imagination/frame-1.jpg",
-          "images/audi-imagination/frame-2.jpg"
+          "images/audi-imagination/frame-1.webp",
+          "images/audi-imagination/frame-2.webp"
       ]
   },
   'parkway-drive-boneyards': {
