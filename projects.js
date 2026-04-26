@@ -26,7 +26,6 @@ var PROJECTS = {
           ]
       },
       "shortDescription": "Performance marketing concepts for Ethos life insurance — static design and motion.",
-      "color": "#2c5f3f",
       "images": [
           "images/ethos/frame-1.jpg",
           "images/ethos/frame-2.jpg",
@@ -67,7 +66,6 @@ var PROJECTS = {
       "challenge": "Over two years, produce hundreds of video assets across broadcast campaigns, performance marketing, and product animation — all under one consistent brand voice.",
       "solution": "Led motion design across six broadcast segments (YOUnique), hundreds of Facebook/Instagram performance variants, Lottie animations for web and app, and chatbot motion systems.",
       "logic": "At Noom's scale, every asset needs to work independently and feel part of the same system. A shared motion language across formats kept the brand coherent without slowing production.",
-      "color": "#2B6B3E",
       "sections": [
           {
               "label": "Broadcast",
@@ -149,7 +147,6 @@ var PROJECTS = {
       "challenge": "Translate two distinct brand identities into logo animations — one kinetic and abstract, one architectural and precise — each with its own motion logic.",
       "solution": "Dynamic uses a helix animation to convey energy and transformation. Beacon Capital uses a scripted dotted-to-solid stroke effect that mimics architectural drafting.",
       "logic": "Logo animation should feel like a natural extension of the brand — not just a reveal. Both concepts were designed to feel inevitable for their respective identities.",
-      "color": "#1a1a2e",
       "videos": [
           {
               "id": "1056590766",
@@ -184,7 +181,6 @@ var PROJECTS = {
       "challenge": "Produce a compelling internal sizzle reel in one week combining voiceover, action photography, product shots, and tabletop footage.",
       "solution": "Worked with an editor and audio engineer to cut a fast-paced brand video using the owner's script as the narrative backbone.",
       "logic": "Tight deadline meant every decision had to serve the cut. The reel needed to communicate product quality and brand energy without wasting a frame.",
-      "color": "#2D7D3A",
       "videos": [
           {
               "id": "1001825990",
@@ -203,7 +199,6 @@ var PROJECTS = {
       "challenge": "Two projects for the National MS Society: design a benefit t-shirt for the Walk MS event, and rebrand the Emerging Leaders Board Instagram presence.",
       "solution": "Collaborated with illustrator Corey Jennings to translate artwork into a wearable vector design for Walk MS. For the IG rebrand, developed multiple template layouts exploring color, type, and visual direction.",
       "logic": "Nonprofit design has to work on a budget and at scale. The shirt design needed to hold up in production; the IG templates needed to be easy for the team to execute without a designer.",
-      "color": "#5B2D8E",
       "sections": [
           {
               "label": "Concept Art",
@@ -258,7 +253,6 @@ var PROJECTS = {
       "challenge": "As Design Director of Food at Deutsch LA, lead the visual language for nine national broadcast spots — each with its own creative concept but needing to feel unified as a campaign.",
       "solution": "Developed a consistent food-forward motion system that could stretch from surreal (Beyond Imagination) to grounded (Undivided Attention) across all nine spots.",
       "logic": "Food design at broadcast scale means every frame has to make the product look irresistible. Lighting, motion, and pacing all serve that single goal.",
-      "color": "#702082",
       "videos": [
           {
               "id": "433650503",
@@ -309,7 +303,6 @@ var PROJECTS = {
       "challenge": "Design scroll-stopping social content across three distinct campaigns — Party Packs, Vegetarian, and Delivery — each with its own visual identity and platform requirements.",
       "solution": "Party Packs used flash photography and instant film aesthetics. Vegetarian used vibrant plating with kaleidoscope effects. Delivery placed Taco Bell in grounded everyday scenes. Each campaign produced assets for 1:1, 16:9, and 9:16 formats.",
       "logic": "Social content at this scale requires a system, not a series of one-offs. Each campaign had defined visual rules that let the team produce variants without losing coherence.",
-      "color": "#702082",
       "sections": [
           {
               "label": "Party Packs",
@@ -454,7 +447,6 @@ var PROJECTS = {
       "challenge": "Design a motion piece for Instagram Story format promoting Harlan & Alondra's album Buddy for the Beats by Dre social team.",
       "solution": "Created a vertical motion design at Laundry Service that matched the album's energy and the constraints of the Story format — looping, immediate, and built for sound-off viewing.",
       "logic": "Portrait format social video demands a different motion logic than broadcast. Every element had to read clearly in the first second.",
-      "color": "#1a1a1a",
       "imageColumns": 3,
       "imageMaxHeight": 600,
       "images": [
@@ -485,7 +477,6 @@ var PROJECTS = {
       "challenge": "Build an internal sizzle reel merging Beats' signature design language with Disney's iconic brand — enough to sell the concept to stakeholders.",
       "solution": "Designed and animated a concept piece that found the intersection between the two brands: bold, premium, and unmistakably fun.",
       "logic": "Proof-of-concept work lives or dies on how clearly it communicates potential. The reel needed to make the partnership feel inevitable.",
-      "color": "#1A3270",
       "videos": [
           {
               "id": "432654184",
@@ -505,7 +496,6 @@ var PROJECTS = {
       "challenge": "Visualize a decentralized mesh internet network in a way that feels credible, technical, and aspirational.",
       "solution": "Art direction by Michael Malowanczyk. 3D design and rendering by Eric Zunkley and Michael Malowanczyk — building abstract network visualizations that communicated scale and connectivity.",
       "logic": "Technology visualization has to balance accuracy with accessibility. The work needed to feel like infrastructure, not decoration.",
-      "color": "#0D3B6E",
       "images": [
           "images/skycoin/frame-1.jpg",
           "images/skycoin/frame-2.jpg"
@@ -522,7 +512,6 @@ var PROJECTS = {
       "challenge": "Design and animate sequences for the Call of Duty: Black Ops 4 anthem spot featuring music by Diplo and French Montana feat. Lil Pump.",
       "solution": "Handled animation, design, and compositing at Space 150 in collaboration with The Mill LA — working within a fast-moving production to deliver broadcast-ready motion.",
       "logic": "Anthem spots for major game releases demand precision under pressure. Every frame is scrutinized. The Mill's production standards set the bar; the job was to meet it.",
-      "color": "#1A1A1A",
       "videos": [
           {
               "id": "1185026554",
@@ -565,7 +554,6 @@ var PROJECTS = {
       "challenge": "Build a cohesive visual identity system across multiple LA sports teams — Lakers, Dodgers, Galaxy, and Sparks — that works live on air and adapts to every format.",
       "solution": "Designed show packages, broadcast elements, in-studio visuals, and promotional spots over two years. Key work includes the Inside Access opening sequence built in Cinema 4D.",
       "logic": "Consistent motion language and type system across teams let editors pull from a shared toolkit without losing team-specific identity.",
-      "color": "#4B2E83",
       "images": [
           "images/spectrum-sportsnet/frame-1.jpg",
           "images/spectrum-sportsnet/frame-2.jpg",
@@ -599,7 +587,6 @@ var PROJECTS = {
       "challenge": "Create a visual identity for a Dodgers baseball analysis segment that captures the precision and energy of the sport.",
       "solution": "Designed a bold, kinetic look pulling from baseball's graphic tradition — clean lines, sharp cuts, and a color palette anchored in Dodger blue.",
       "logic": "The segment needed to feel distinct within the Spectrum Sportsnet system while clearly belonging to it. Strong typography and motion cues carry the brand.",
-      "color": "#005A9C",
       "images": [
           "images/high-and-tight/frame-1.jpg",
           "images/high-and-tight/frame-2.jpg"
@@ -623,7 +610,6 @@ var PROJECTS = {
       "challenge": "Design an opening sequence for a Dodgers coverage segment that feels local and personal — rooted in LA.",
       "solution": "Built a motion package with a warm, editorial feel using found photography and bold typography to ground the segment in the city.",
       "logic": "Spectrum Sportsnet needed segments that could stand on their own tonally. Hometown Call leans warmer and more nostalgic than the harder-edged game coverage.",
-      "color": "#1A3B6E",
       "imageColumns": 1,
       "images": [
           "images/hometowncall/frame-1.jpg"
@@ -648,7 +634,6 @@ var PROJECTS = {
       "challenge": "Create animation and design for a global Beats campaign celebrating colorful headphones. The brief: life's more fun in color.",
       "solution": "Developed a vibrant motion system using illustration, abstract animation, and color theory. Music by MNEK feat. Hailee Steinfeld drove the pacing and energy.",
       "logic": "The campaign needed to feel joyful and unapologetically bold — motion that matched the product's personality rather than just showcasing it.",
-      "color": "#C41E7A",
       "sections": [
           {
               "label": "Motion",
@@ -735,7 +720,6 @@ var PROJECTS = {
       "challenge": "Design an end title sequence for a major feature film that sustains visual engagement across the full credits roll while matching the film's dramatic, atmospheric tone.",
       "solution": "Created an organic motion system using particle simulations and environmental textures — echoing the film's themes of nature and survival without replicating the film's footage.",
       "logic": "End titles are often treated as an afterthought. The goal was to create something that felt like a natural extension of the film rather than a corporate card.",
-      "color": "#1C2E1A",
       "images": [
           "images/afterearth/frame-1.jpg",
           "images/afterearth/frame-2.jpg",
@@ -761,7 +745,6 @@ var PROJECTS = {
       "challenge": "Pitch an opening sequence concept for Anchorman 2 that blended retro aesthetics with the film's comedic sensibility and classic news broadcasting references.",
       "solution": "Developed 15 style frames using a posterized, graphic treatment in Photoshop, Illustrator, C4D, and After Effects — capturing the satirical tone through bold typography and period-appropriate design.",
       "logic": "The concept was never produced, but the process of translating a film's comedic voice into a visual system is the same whether it ships or not.",
-      "color": "#8B1A1A",
       "images": [
           "images/anchorman-2/frame-1.jpg",
           "images/anchorman-2/frame-2.jpg",
@@ -792,7 +775,6 @@ var PROJECTS = {
       "challenge": "Create an online lyric video for Barbie's \"Anything is Possible\" with a stop-motion photography aesthetic and photo-realistic look.",
       "solution": "At Picture Mill, built C4D animation, lighting, and rendering to achieve the tactile, hand-crafted feel. Compositing by Nelson Yu.",
       "logic": "The challenge with photo-realistic CG is making it feel intentionally handmade — the stop-motion reference gave the project a warmth that pure CG rarely achieves.",
-      "color": "#E91E8C",
       "images": [
           "images/barbie/frame-1.jpg",
           "images/barbie/frame-2.jpg"
@@ -816,7 +798,6 @@ var PROJECTS = {
       "challenge": "Design a main title sequence for a TV show about a respected doctor treating patients with mental illness — capturing the complexity of a multifaceted personality.",
       "solution": "Used reflective faceted panels as the core design motif, creating a visual metaphor for fragmented identity. Pitch was not produced. Studio: Picture Mill.",
       "logic": "Rejected pitches are still full design problems. The reflective panel system solved the brief — the production decision had nothing to do with the concept.",
-      "color": "#1C1C2E",
       "images": [
           "images/blackbox/frame-1.jpg",
           "images/blackbox/frame-2.jpg",
@@ -838,7 +819,6 @@ var PROJECTS = {
       "challenge": "Create a visual starting point for client discussions — something concrete enough to spark a conversation about what a full design engagement could look like.",
       "solution": "Developed a proof of concept at Picture Mill that established tone, motion language, and visual direction without overcommitting to a finished system.",
       "logic": "Proof-of-concept work is about demonstrating possibility, not delivering a product. The goal is to make a client see something they didn't know they wanted.",
-      "color": "#AA0000",
       "imageColumns": 1,
       "images": [
           "images/san-francisco-49ers/frame-1.jpg"
@@ -856,7 +836,6 @@ var PROJECTS = {
       "challenge": "Pitch a main title sequence for the TV show Mom — a comedy about addiction and family. Two distinct concept series: Wall and Fall.",
       "solution": "Wall explored found objects and domestic textures arranged as typographic elements. Fall used kinetic dropping motion to convey both comedy and consequence. Developed at Picture Mill.",
       "logic": "Comedy title sequences have to establish tone without undercutting the show's emotional honesty. Both concepts worked in opposite directions — one grounded, one kinetic.",
-      "color": "#C47A3A",
       "images": [
           "images/mom/frame-1.jpg",
           "images/mom/frame-3.jpg",
@@ -881,7 +860,6 @@ var PROJECTS = {
       "challenge": "Pitch an opening sequence concept for the TMNT film that captured the franchise's iconic energy while feeling modern enough for a feature film audience.",
       "solution": "Developed 18 style frames building a graphic, high-contrast visual system. Designed and animated at Picture Mill.",
       "logic": "Franchise IP comes with deep audience expectations. The design had to honor the source material while pushing it somewhere new — familiar but not nostalgic.",
-      "color": "#2D6B2D",
       "images": [
           "images/teenage-mutant-ninja-turtles/frame-1.jpg",
           "images/teenage-mutant-ninja-turtles/frame-2.jpg",
@@ -915,7 +893,6 @@ var PROJECTS = {
       "challenge": "Develop multiple logo animation concepts for Ratpac Entertainment — each with a distinct visual approach across three concept series: Chip, Dice, and Marquee.",
       "solution": "Created 16 style frames across the three series, each exploring different motion logic and visual texture to show range before committing to a direction.",
       "logic": "Logo animation pitches work best when they show a spread of directions rather than one polished answer. Three distinct concepts let the client find their instinct.",
-      "color": "#1A1A3A",
       "sections": [
           {
               "label": "Concept 1",
@@ -978,7 +955,6 @@ var PROJECTS = {
       "challenge": "Create style frames for an Audi A7 Sportback broadcast commercial for BBH London — a stylized journey through the mind of an automotive designer.",
       "solution": "Developed organic and mechanical imagery that blended the natural world with precision engineering. The designer's horse artwork was selected for the final version. Directed by Vanessa Marzaroli.",
       "logic": "Automotive design inspiration lives at the intersection of nature and engineering. The brief asked for that tension to be visualized — the horse became the answer.",
-      "color": "#1A1A1A",
       "images": [
           "images/audi-imagination/frame-1.jpg",
           "images/audi-imagination/frame-2.jpg"
@@ -996,7 +972,6 @@ var PROJECTS = {
       "challenge": "Capture the raw intensity of Parkway Drive's live performance energy in a music video that matches the relentless pace of the song.",
       "solution": "Dynamic camera work and frenetic editing synced to the song's rhythm. Thematic references to the lyrics layered with stock footage for atmospheric depth. DP: Alex Gvojic, Editor: Dan Dobi. Client: Epitaph Records.",
       "logic": "Metal music video direction is about energy management — building and releasing tension in sync with the music. The cut has to feel inevitable.",
-      "color": "#2A1A0E",
       "videos": [
           {
               "id": "9212257",
