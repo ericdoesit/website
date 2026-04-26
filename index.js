@@ -14,7 +14,7 @@ function setResponsiveVideoSource() {
     src = video.dataset.small;
   }
 
-  if (src && video.querySelector('source').src !== src) {
+  if (src && video.querySelector('source').getAttribute('src') !== src) {
     video.querySelector('source').src = src;
     video.load();
   }
