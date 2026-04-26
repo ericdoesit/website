@@ -40,7 +40,7 @@ if (typeof PROJECTS !== 'undefined') {
 
     if (!item.querySelector('.project-reveal-img')) {
       const img = document.createElement('img');
-      img.src = `images/thumbs/${id}.jpg`;
+      img.src = `images/thumbs/${id}.webp`;
       img.className = 'project-reveal-img';
       img.loading = 'lazy';
       img.alt = PROJECTS[id]?.title.replace('\n', ' ') || 'Project image';
