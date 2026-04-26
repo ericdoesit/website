@@ -120,27 +120,18 @@ body {
 
 /* ── Index: Header ──────────────────────────── */
 .header {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
   align-items: center;
   padding: 0 20px;
   min-height: clamp(200px, 50vh, 420px);
 }
 
-.header__headline {
-  font-family: 'PP Mori', sans-serif;
-  font-size: clamp(42px, 7vw, 120px);
-  font-weight: 600;
-  line-height: 0.90;
-  letter-spacing: -0.05em;
-  text-transform: none;
+.header__image {
+  height: 100%;
+  width: auto;
+  max-width: 80%;
+  object-fit: contain;
 }
-
-
-.hl-c1 { color: var(--red); }
-.hl-c2 { color: var(--blue); }
-.hl-c3 { color: var(--yellow); }
-.hl-c4 { color: var(--green); }
 
 @media (max-width: 1024px) {
   .header__headline { font-size: clamp(42px, 10vw, 120px); }
