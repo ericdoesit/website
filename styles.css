@@ -214,8 +214,8 @@ body {
 }
 
 .feature-card:nth-child(1) .feature-image { background: linear-gradient(135deg, #E04EA0 -30%, #3850E0 130%); }
-.feature-card:nth-child(2) .feature-image { background: linear-gradient(120deg, #C07FE0 -30%, #1A9040 130%); }
-.feature-card:nth-child(3) .feature-image { background: linear-gradient(160deg, #F0B020 -30%, #E82020 130%); }
+.feature-card:nth-child(2) .feature-image { background: linear-gradient(160deg, #F0B020 -30%, #E82020 130%); }
+.feature-card:nth-child(3) .feature-image { background: linear-gradient(120deg, #C07FE0 -30%, #1A9040 130%); }
 .feature-card:nth-child(4) .feature-image { background: linear-gradient(145deg, #E87020 -30%, #6040C8 130%); }
 
 .feature-card:hover .feature-image {

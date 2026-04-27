@@ -1,23 +1,26 @@
-// Set responsive video source for featured Noom video
+// Set responsive video source for featured videos
 function setResponsiveVideoSource() {
-  const video = document.getElementById('noom-featured-video');
-  if (!video) return;
+  const videos = document.querySelectorAll('video[data-small][data-medium][data-large]');
+  if (videos.length === 0) return;
 
   const width = window.innerWidth;
   let src;
 
   if (width >= 1200) {
-    src = video.dataset.large;
+    src = 'large';
   } else if (width >= 600) {
-    src = video.dataset.medium;
+    src = 'medium';
   } else {
-    src = video.dataset.small;
+    src = 'small';
   }
 
-  if (src && video.querySelector('source').getAttribute('src') !== src) {
-    video.querySelector('source').src = src;
-    video.load();
-  }
+  videos.forEach(video => {
+    const newSrc = video.dataset[src];
+    if (newSrc && video.querySelector('source').getAttribute('src') !== newSrc) {
+      video.querySelector('source').src = newSrc;
+      video.load();
+    }
+  });
 }
 
 setResponsiveVideoSource();
