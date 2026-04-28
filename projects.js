@@ -970,8 +970,26 @@ var PROJECTS = {
       "title": "Parkway Drive\nBoneyards",
       "deliverable": "Music Video",
       "challenge": "Capture the raw intensity of Parkway Drive's live performance energy in a music video that matches the relentless pace of the song.",
-      "solution": "Dynamic camera work and frenetic editing synced to the song's rhythm. Thematic references to the lyrics layered with stock footage for atmospheric depth. DP: Alex Gvojic, Editor: Dan Dobi. Client: Epitaph Records.",
+      "solution": "Dynamic camera work and frenetic editing synced to the song's rhythm. Thematic references to the lyrics layered with stock footage for atmospheric depth.",
       "logic": "Metal music video direction is about energy management — building and releasing tension in sync with the music. The cut has to feel inevitable.",
+      "credits": [
+          {
+              "role": "Client",
+              "name": "Epitaph Records"
+          },
+          {
+              "role": "Director",
+              "name": "Eric Zunkley"
+          },
+          {
+              "role": "Director of Photography",
+              "name": "Alex Gvojic"
+          },
+          {
+              "role": "Editor",
+              "name": "Dan Dobi"
+          }
+      ],
       "videos": [
           {
               "id": "9212257",
