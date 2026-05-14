@@ -44,11 +44,6 @@ var PROJECTS = {
                           "images/sharon-zunkley/frame-4.webp",
                           "images/sharon-zunkley/frame-5.webp"
                       ]
-                  },
-                  {
-                      "type": "link",
-                      "label": "Figma File",
-                      "url": "https://www.figma.com/proto/dPjGCk937efOnNH7anI1yV/Website?node-id=2-868&t=Go2PZJixS3yOVFV2-1"
                   }
               ]
           }
