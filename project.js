@@ -90,6 +90,10 @@ function renderBlock(block) {
       return `<div class="quote-block fade-in"><p>${block.text}</p></div>`;
     case 'caption':
       return `<p class="section-caption fade-in">${block.body}</p>`;
+    case 'figma':
+      return `<div class="figma-embed fade-in"><div class="figma-embed__inner"><iframe src="${block.src}" allowfullscreen></iframe></div></div>`;
+    case 'link':
+      return `<div class="section-link fade-in"><a class="section-link-btn" href="${block.url}" target="_blank" rel="noopener">${block.label}</a></div>`;
   }
   return '';
 }

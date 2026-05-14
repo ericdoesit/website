@@ -1,4 +1,70 @@
 var PROJECTS = {
+  'sharon-zunkley': {
+      "year": 2025,
+      "tags": [
+          "design",
+          "product"
+      ],
+      "categoryLabel": "Design & Development",
+      "title": "Custom Website",
+      "deliverable": "Custom Real Estate Website",
+      "challenge": "Sharon was running her real estate site on a GoDaddy template that didn't represent her experience and didn't align with her brand.",
+      "solution": "Built a custom site around her brand: a luxury editorial aesthetic uncommon in the category, Sanity CMS she can operate herself, and a full integration stack — Vercel CI/CD, Typebot lead capture, SendGrid contact routing, and webhook-triggered page revalidation.",
+      "logic": "Real estate sites all look the same. The design borrows from editorial fashion and luxury property — and every integration was chosen to solve a specific operational need, not pad a feature list.",
+      "shortDescription": "Custom real estate website for Sharon Zunkley — luxury editorial design, Sanity CMS, and a full integration stack built on Next.js.",
+      "sections": [
+          {
+              "label": "Process",
+              "blocks": [
+                  {
+                      "type": "text",
+                      "body": "The process started with digesting Sharon's two existing sites — scraping content scattered across a GoDaddy template and a legacy page, then restructuring it around a new design. That design happened in Figma first, then translated to code through the Claude CLI: writing, refining, and solving problems in real time through conversation."
+                  },
+                  {
+                      "type": "text",
+                      "body": "Next.js, React, TypeScript, Tailwind CSS. No component library — everything custom-built to the Figma spec."
+                  },
+                  {
+                      "type": "text",
+                      "body": "Sanity CMS lets Sharon manage listings, posts, and reviews herself — content goes live instantly via webhook. Typebot handles lead capture. SendGrid routes contact form emails. Deployed on Vercel."
+                  }
+              ]
+          },
+          {
+              "label": "Design",
+              "blocks": [
+                  {
+                      "type": "images",
+                      "columns": 3,
+                      "items": [
+                          "images/thumbs/real_estate_site.webp",
+                          "images/sharon-zunkley/frame-1.webp",
+                          "images/sharon-zunkley/frame-2.webp",
+                          "images/sharon-zunkley/frame-3.webp",
+                          "images/sharon-zunkley/frame-4.webp",
+                          "images/sharon-zunkley/frame-5.webp"
+                      ]
+                  },
+                  {
+                      "type": "link",
+                      "label": "Figma File",
+                      "url": "https://www.figma.com/proto/dPjGCk937efOnNH7anI1yV/Website?node-id=2-868&t=Go2PZJixS3yOVFV2-1"
+                  }
+              ]
+          }
+      ],
+      "credits": [
+          {
+              "role": "Design & Development",
+              "name": "Eric Zunkley"
+          },
+          {
+              "role": "Live Site",
+              "name": "sharonzunkley.com",
+              "url": "https://sharonzunkley.com"
+          }
+      ]
+  },
   'ethos': {
       "year": 2025,
       "tags": [
