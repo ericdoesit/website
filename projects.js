@@ -37,7 +37,7 @@ var PROJECTS = {
                       "type": "images",
                       "columns": 3,
                       "items": [
-                          "images/thumbs/real_estate_site.webp",
+                          "images/sharon-zunkley/frame-0.webp",
                           "images/sharon-zunkley/frame-1.webp",
                           "images/sharon-zunkley/frame-2.webp",
                           "images/sharon-zunkley/frame-3.webp",
