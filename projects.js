@@ -6,7 +6,7 @@ var PROJECTS = {
           "product"
       ],
       "categoryLabel": "Design & Development",
-      "title": "Custom Website",
+      "title": "Branding and Website",
       "deliverable": "Custom Real Estate Website",
       "challenge": "Sharon was running her real estate site on a GoDaddy template that didn't represent her experience and didn't align with her brand.",
       "solution": "Built a custom site around her brand: a luxury editorial aesthetic uncommon in the category, Sanity CMS she can operate herself, and a full integration stack — Vercel CI/CD, Typebot lead capture, SendGrid contact routing, and webhook-triggered page revalidation.",
@@ -18,15 +18,15 @@ var PROJECTS = {
               "blocks": [
                   {
                       "type": "text",
-                      "body": "The process started with digesting Sharon's two existing sites — scraping content scattered across a GoDaddy template and a legacy page, then restructuring it around a new design. That design happened in Figma first, then translated to code through the Claude CLI: writing, refining, and solving problems in real time through conversation."
+                      "body": "This project was exploratory from the start. My mother had two sites, one on GoDaddy and another with her brokerage, neither reflected her personality. I was also curious what it would look like to build something real through the Claude CLI. I can read and reason through code, but not at the complexity this site ended up reaching."
                   },
                   {
                       "type": "text",
-                      "body": "Next.js, React, TypeScript, Tailwind CSS. No component library — everything custom-built to the Figma spec."
+                      "body": "The process began with a scraper I wrote through Claude CLI to pull content from both existing sites — consolidating scattered copy, listings, and structure into something workable. From there, design happened in Figma first: a luxury editorial direction built out with reference imagery. That spec became the blueprint for code — writing, iterating, and solving problems in real time through conversation."
                   },
                   {
                       "type": "text",
-                      "body": "Sanity CMS lets Sharon manage listings, posts, and reviews herself — content goes live instantly via webhook. Typebot handles lead capture. SendGrid routes contact form emails. Deployed on Vercel."
+                      "body": "Next.js, React, TypeScript, Tailwind CSS. No component library — everything custom-built to the Figma spec. Sanity CMS lets Sharon manage listings, posts, and reviews herself — content goes live instantly via webhook. Typebot handles lead capture. SendGrid routes contact form emails. Deployed on Vercel."
                   }
               ]
           },
