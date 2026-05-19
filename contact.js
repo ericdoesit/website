@@ -54,6 +54,7 @@ contactForm.addEventListener('submit', async (e) => {
         email:   contactForm.querySelector('[name="email"]').value,
         subject: contactForm.querySelector('[name="subject"]').value,
         message: contactForm.querySelector('[name="message"]').value,
+        _honey:  contactForm.querySelector('[name="_honey"]').value,
       })
     });
 

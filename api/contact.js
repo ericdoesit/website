@@ -4,7 +4,8 @@ module.exports = async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(204).end();
   if (req.method !== 'POST') return res.status(405).json({ ok: false });
 
-  const { name, email, subject, message } = req.body;
+  const { name, email, subject, message, _honey } = req.body;
+  if (_honey) return res.status(200).json({ ok: true });
   if (!name || !email || !subject || !message)
     return res.status(400).json({ ok: false, error: 'All fields are required' });
 

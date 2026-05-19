@@ -957,6 +957,7 @@ img.image-thumb {
 .contact-modal__content {
   position: relative;
   z-index: 1001;
+  background: var(--bg);
   border-radius: 12px;
   padding: 40px;
   width: 90%;
@@ -1015,6 +1016,13 @@ img.image-thumb {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.contact-form__honey {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .form-group {
