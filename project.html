@@ -45,11 +45,15 @@
 <!-- Contact Modal -->
 <div id="contact-modal" class="contact-modal">
   <div class="contact-modal__overlay"></div>
+  <button class="contact-modal__close" id="close-modal" aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="18" y1="6" x2="6" y2="18"/>
+      <line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
   <div class="contact-modal__content">
-    <button class="contact-modal__close" id="close-modal" aria-label="Close">×</button>
     <h2 class="contact-modal__title">Get in touch</h2>
     <form id="contact-form" class="contact-form">
-      <input type="hidden" name="_captcha" value="false">
       <div class="form-group">
         <input type="text" name="name" placeholder="Your name" required>
       </div>

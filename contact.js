@@ -46,26 +46,26 @@ contactForm.addEventListener('submit', async (e) => {
   formStatus.textContent = '';
 
   try {
-    const formData = new FormData(contactForm);
-
-    const response = await fetch('https://formspree.io/f/mojyrynn', {
+    const response = await fetch('/api/contact', {
       method: 'POST',
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name:    contactForm.querySelector('[name="name"]').value,
+        email:   contactForm.querySelector('[name="email"]').value,
+        subject: contactForm.querySelector('[name="subject"]').value,
+        message: contactForm.querySelector('[name="message"]').value,
+      })
     });
 
-    if (response.ok) {
+    const data = await response.json();
+
+    if (response.ok && data.ok) {
       formStatus.textContent = 'Message sent! Thanks for reaching out.';
       formStatus.className = 'contact-form__status success';
       contactForm.reset();
-
-      setTimeout(() => {
-        closeModal();
-      }, 2000);
+      setTimeout(() => { closeModal(); }, 2000);
     } else {
-      throw new Error('Form submission failed');
+      throw new Error(data.error || 'Form submission failed');
     }
   } catch (error) {
     formStatus.textContent = 'Error sending message. Please try again.';
