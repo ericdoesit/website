@@ -4,10 +4,20 @@ const closeBtn = document.getElementById('close-modal');
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
 
+function getFocusable() {
+  return Array.from(contactModal.querySelectorAll(
+    'button:not([disabled]), input:not([tabindex="-1"]):not([disabled]), textarea:not([disabled])'
+  ));
+}
+
 // Open modal
 emailBtn.addEventListener('click', () => {
   contactModal.classList.add('active');
   document.body.style.overflow = 'hidden';
+  requestAnimationFrame(() => {
+    const nameInput = contactForm.querySelector('[name="name"]');
+    if (nameInput) nameInput.focus();
+  });
 });
 
 // Close modal
@@ -16,6 +26,7 @@ function closeModal() {
   document.body.style.overflow = '';
   formStatus.textContent = '';
   formStatus.className = 'contact-form__status';
+  emailBtn.focus();
 }
 
 closeBtn.addEventListener('click', closeModal);
@@ -28,10 +39,30 @@ contactModal.querySelector('.contact-modal__content').addEventListener('click', 
   e.stopPropagation();
 });
 
-// Close on ESC key
+// ESC to close, Tab to trap focus within modal
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && contactModal.classList.contains('active')) {
+  if (!contactModal.classList.contains('active')) return;
+
+  if (e.key === 'Escape') {
     closeModal();
+    return;
+  }
+
+  if (e.key === 'Tab') {
+    const focusable = getFocusable();
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      }
+    } else {
+      if (document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
   }
 });
 

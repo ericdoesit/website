@@ -62,7 +62,7 @@ if (p.videos && p.videos.length) {
       const src = v.platform === 'youtube' ? `https://www.youtube.com/embed/${v.id}` : `https://player.vimeo.com/video/${v.id}?title=0&byline=0&portrait=0`;
       const allow = v.platform === 'youtube' ? 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' : 'autoplay; fullscreen; picture-in-picture';
       const ref = v.platform === 'youtube' ? ' referrerpolicy="strict-origin-when-cross-origin"' : '';
-      return `<div class="video-embed" style="${span}aspect-ratio:${v.ratio || '16/9'}"><iframe src="${src}" allow="${allow}"${ref} allowfullscreen></iframe></div>`;
+      return `<div class="video-embed" style="${span}aspect-ratio:${v.ratio || '16/9'}"><iframe src="${src}" title="Video player" allow="${allow}"${ref} allowfullscreen></iframe></div>`;
     })
     .join('');
 }
@@ -70,11 +70,11 @@ if (p.videos && p.videos.length) {
 function renderBlock(block) {
   switch (block.type) {
     case 'video':
-      return `<div class="section-block-video fade-in"><div class="video-embed" style="aspect-ratio:${block.ratio||'16/9'}"><iframe src="https://player.vimeo.com/video/${block.id}?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div></div>`;
+      return `<div class="section-block-video fade-in"><div class="video-embed" style="aspect-ratio:${block.ratio||'16/9'}"><iframe src="https://player.vimeo.com/video/${block.id}?title=0&byline=0&portrait=0" title="Video player" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div></div>`;
     case 'videos': {
       const cols = block.columns || 2;
       const embeds = block.items.map(v =>
-        `<div class="video-embed" style="aspect-ratio:${v.ratio||'1/1'}"><iframe src="https://player.vimeo.com/video/${v.id}?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>`
+        `<div class="video-embed" style="aspect-ratio:${v.ratio||'1/1'}"><iframe src="https://player.vimeo.com/video/${v.id}?title=0&byline=0&portrait=0" title="Video player" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>`
       ).join('');
       return `<div class="fade-in" style="display:grid;grid-template-columns:repeat(${cols},1fr);gap:10px;padding:10px 20px">${embeds}</div>`;
     }
@@ -91,7 +91,7 @@ function renderBlock(block) {
     case 'caption':
       return `<p class="section-caption fade-in">${block.body}</p>`;
     case 'figma':
-      return `<div class="figma-embed fade-in"><div class="figma-embed__inner"><iframe src="${block.src}" allowfullscreen></iframe></div></div>`;
+      return `<div class="figma-embed fade-in"><div class="figma-embed__inner"><iframe src="${block.src}" title="Figma design" allowfullscreen></iframe></div></div>`;
     case 'link':
       return `<div class="section-link fade-in"><a class="section-link-btn" href="${block.url}" target="_blank" rel="noopener">${block.label}</a></div>`;
   }

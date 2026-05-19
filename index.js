@@ -16,8 +16,10 @@ function setResponsiveVideoSource() {
 
   videos.forEach(video => {
     const newSrc = video.dataset[src];
-    if (newSrc && video.querySelector('source').getAttribute('src') !== newSrc) {
-      video.querySelector('source').src = newSrc;
+    const sourceEl = video.querySelector('source');
+    if (!sourceEl || !newSrc) return;
+    if (sourceEl.getAttribute('src') !== newSrc) {
+      sourceEl.src = newSrc;
       video.load();
     }
   });
@@ -73,8 +75,12 @@ document.querySelector('.projects').addEventListener('mouseleave', () => {
 const filterBtns = document.querySelectorAll('.filter-btn');
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
+    filterBtns.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
     const cat = btn.dataset.category;
     projectItems.forEach(item => {
       item.classList.remove('filtered-out');

@@ -16,8 +16,10 @@
 (function () {
   const overlay = document.createElement('div');
   overlay.className = 'lightbox-overlay';
-  const closeBtn = document.createElement('div');
+  const closeBtn = document.createElement('button');
+  closeBtn.type = 'button';
   closeBtn.className = 'lightbox-close';
+  closeBtn.setAttribute('aria-label', 'Close lightbox');
   closeBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
   const img = document.createElement('img');
   overlay.appendChild(closeBtn);
