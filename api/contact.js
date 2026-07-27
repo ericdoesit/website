@@ -1,4 +1,4 @@
-const sgMail = require('@sendgrid/mail');
+const { Resend } = require('resend');
 
 function escapeHtml(str) {
   return String(str)
@@ -29,22 +29,27 @@ module.exports = async function handler(req, res) {
   if (name.length > 200 || subject.length > 300 || message.length > 5000)
     return res.status(400).json({ ok: false, error: 'Input too long' });
 
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
-  const msg = {
-    to: 'ericzunkley@gmail.com',
-    from: 'noreply@ericzunkley.com',
-    replyTo: { email, name },
-    subject: `[Portfolio Contact] ${subject}`,
-    text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
-    html: `<p><strong>Name:</strong> ${escapeHtml(name)}</p><p><strong>Email:</strong> ${escapeHtml(email)}</p><hr><p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>`
-  };
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  const from = process.env.RESEND_FROM_EMAIL || 'Portfolio Contact <onboarding@resend.dev>';
 
   try {
-    await sgMail.send(msg);
+    const { error } = await resend.emails.send({
+      from,
+      to: 'ericzunkley@gmail.com',
+      replyTo: email,
+      subject: `[Portfolio Contact] ${subject}`,
+      text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
+      html: `<p><strong>Name:</strong> ${escapeHtml(name)}</p><p><strong>Email:</strong> ${escapeHtml(email)}</p><hr><p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>`
+    });
+
+    if (error) {
+      console.error('Resend error:', error);
+      return res.status(500).json({ ok: false, error: 'Failed to send email' });
+    }
+
     return res.status(200).json({ ok: true });
   } catch (err) {
-    console.error('SendGrid error:', err?.response?.body || err.message);
+    console.error('Resend error:', err?.message || err);
     return res.status(500).json({ ok: false, error: 'Failed to send email' });
   }
 };
